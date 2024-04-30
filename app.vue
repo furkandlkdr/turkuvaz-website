@@ -159,29 +159,68 @@
     <div class="logos">
       <div class="logos-slide">
         <!-- LOGOS -->
-        <img src="./assets/2Bee_opt.svg" />
-        <img src="./assets/2Mes_opt.svg" />
-        <img src="./assets/2Win_opt.svg" />
-        <img src="./assets/2Bee_opt.svg" />
-        <img src="./assets/2Mes_opt.svg" />
-        <img src="./assets/2Win_opt.svg" />
-      </div>
-      <div class="logos-slide">
-        <!-- LOGOS -->
-        <img src="./assets/2Bee_opt.svg" />
-        <img src="./assets/2Mes_opt.svg" />
-        <img src="./assets/2Win_opt.svg" />
-        <img src="./assets/2Bee_opt.svg" />
-        <img src="./assets/2Mes_opt.svg" />
-        <img src="./assets/2Win_opt.svg" />
+        <img v-for="image in images" :src="image" style="  height: 50px; margin: 0 40px;" />
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
 export default {
   name: 'Main Page',
+  data() {
+    return {
+      images: [
+        './assets/ref/altek.jpg',
+        './assets/ref/altinay.png',
+        './assets/ref/ankalogo.png',
+        './assets/ref/arcelik.jpg',
+        './assets/ref/arel.jpg',
+        './assets/ref/besler_tekstil.jpg',
+        './assets/ref/boydak.jpg',
+        './assets/ref/boytas.jpg',
+        './assets/ref/boyteks.jpg',
+        './assets/ref/calik-denim-logo.jpg',
+        './assets/ref/capar.jpg',
+        './assets/ref/cimpor.jpg',
+        './assets/ref/corobo.jpg',
+        './assets/ref/emekkablo.png',
+        './assets/ref/erciyes_mikron.jpg',
+        './assets/ref/erciyeskirec.jpg',
+        './assets/ref/etk.jpg',
+        './assets/ref/ezinc.jpg',
+        './assets/ref/formsunger.jpg',
+        './assets/ref/gmm.jpg',
+        './assets/ref/hes_kablo.jpg',
+        './assets/ref/istikbal.jpg',
+        './assets/ref/kaftan.jpg',
+        './assets/ref/kaski.jpg',
+        './assets/ref/kaybitas.jpg',
+        './assets/ref/kayseriukasim.png',
+        './assets/ref/lenze.jpg',
+        './assets/ref/lineer.jpg',
+        './assets/ref/logoBoytas.png',
+        './assets/ref/meka.jpg',
+        './assets/ref/melikgazi.png',
+        './assets/ref/merkez_celik.jpg',
+        './assets/ref/mert_makine.jpg',
+        './assets/ref/mesa.jpg',
+        './assets/ref/mondi.jpg',
+        './assets/ref/nil.jpg',
+        './assets/ref/nkskablo.png',
+        './assets/ref/nurol_1.jpg',
+        './assets/ref/ortaanadolu.jpg',
+        './assets/ref/ravaber.png',
+        './assets/ref/simfer.jpg',
+        './assets/ref/sirikcioglu-logo.png',
+        './assets/ref/smgmuh.png',
+        './assets/ref/tai.png',
+        './assets/ref/talas.png',
+        './assets/ref/tmo.jpg',
+      ]
+    }
+  }
 }
 
 </script>
