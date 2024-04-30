@@ -159,7 +159,7 @@
     <div class="logos">
       <div class="logos-slide">
         <!-- LOGOS -->
-        <img v-for="image in images" :src="image" style="  height: 50px; margin: 0 40px;" />
+        <img v-for="image in images" :src="image" />
       </div>
     </div>
     
