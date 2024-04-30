@@ -156,15 +156,17 @@
       </div>
     </div>
     <!-- Company Slider -->
-    <div class="logos">
-      <div class="logos-slide">
-        <!-- LOGOLAR -->
+    <div class="logos-wrapper">
+      <div class="logos">
+        <div class="logos-slide">
+          <!-- LOGOS -->
+          <img src="./assets/2Bee_opt.svg" />
+          <img src="./assets/2Das_opt.svg" />
+          <img src="./assets/2Mes_opt.svg" />
+          <img src="./assets/2Win_opt.svg" />
+        </div>
       </div>
     </div>
-    <script>
-      var copy = document.querySelector(".logos-slide").cloneNode(true);
-      document.querySelector(".logos").appendChild(copy);
-    </script>
   </div>
 </template>
 
@@ -172,6 +174,7 @@
 export default {
   name: 'Main Page',
 }
+
 </script>
 
 <style scoped>
@@ -189,10 +192,26 @@ export default {
   }
 }
 
+.logos-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .logos {
   overflow: hidden;
-  padding: 60px 0 0 0;
-  background-color: white;
+  padding: 60px 0;
+  background: white;
   white-space: nowrap;
   position: relative;
 }
@@ -205,18 +224,16 @@ export default {
   height: 100%;
   content: "";
   z-index: 2;
-
 }
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
 
-.logos:after{
+.logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
 .logos:hover .logos-slide {
@@ -225,7 +242,7 @@ export default {
 
 .logos-slide {
   display: inline-block;
-  animation: 20s slide infinite linear;
+  animation: 35s slide infinite linear;
 }
 
 .logos-slide img {
