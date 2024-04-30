@@ -2,7 +2,7 @@
   <title>Turkuvaz İnovasyon</title>
   <div id="container">
     <div class="navbar bg-base-200 justify-between">
-      <div class="">
+      <div>
         <link class="btn btn-ghost text-xl">
         <img src="assets\onlylogo.svg">
         </link>
@@ -156,15 +156,24 @@
       </div>
     </div>
     <!-- Company Slider -->
-    <div class="logos-wrapper">
-      <div class="logos">
-        <div class="logos-slide">
-          <!-- LOGOS -->
-          <img src="./assets/2Bee_opt.svg" />
-          <img src="./assets/2Das_opt.svg" />
-          <img src="./assets/2Mes_opt.svg" />
-          <img src="./assets/2Win_opt.svg" />
-        </div>
+    <div class="logos">
+      <div class="logos-slide">
+        <!-- LOGOS -->
+        <img src="./assets/2Bee_opt.svg" />
+        <img src="./assets/2Mes_opt.svg" />
+        <img src="./assets/2Win_opt.svg" />
+        <img src="./assets/2Bee_opt.svg" />
+        <img src="./assets/2Mes_opt.svg" />
+        <img src="./assets/2Win_opt.svg" />
+      </div>
+      <div class="logos-slide">
+        <!-- LOGOS -->
+        <img src="./assets/2Bee_opt.svg" />
+        <img src="./assets/2Mes_opt.svg" />
+        <img src="./assets/2Win_opt.svg" />
+        <img src="./assets/2Bee_opt.svg" />
+        <img src="./assets/2Mes_opt.svg" />
+        <img src="./assets/2Win_opt.svg" />
       </div>
     </div>
   </div>
@@ -179,22 +188,6 @@ export default {
 
 <style scoped>
 * {
-  font-weight: 500;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logos-wrapper {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -211,7 +204,7 @@ export default {
 .logos {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: #13171b;
   white-space: nowrap;
   position: relative;
 }
@@ -228,12 +221,12 @@ export default {
 
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, transparent, #1d232a);
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, transparent, #1d232a);
 }
 
 .logos:hover .logos-slide {
