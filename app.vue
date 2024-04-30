@@ -96,7 +96,8 @@
           <img src="./assets/2Win_opt.svg" alt="2Win" />
           <div class="card-body">
             <h2 class="card-title text-5xl">2Win - SCADA Sistemleri</h2>
-            <p class="text-xl">SCADA işletmeler için, işletme içinde veya dışında herhangi bir yerde kullanılan bütün
+            <p class="text-xl drop-shadow-lg">SCADA işletmeler için, işletme içinde veya dışında herhangi bir yerde
+              kullanılan bütün
               cihazların
               izlenmesi ve kontrol edilebilmesini sağlayan vazgeçilemez bir sistemdir. 2Win Scada Yazılımı ile maksimum
               erişilebilirlik ve hızlı müdahale hedeflenmiştir. Web tabanlı geliştirilen yazılımımız bu hedefe ulaşırken
@@ -111,7 +112,8 @@
           <img src="./assets/2Mes_opt.svg" alt="2Mes" />
           <div class="card-body">
             <h2 class="card-title text-5xl">2Mes- Veri Toplama Sistemi</h2>
-            <p class="text-xl">Günümüz rekabet koşullarında kaliteden ödün vermeden maliyetlerin düşürülmesi işletmeler
+            <p class="text-xl drop-shadow-lg">Günümüz rekabet koşullarında kaliteden ödün vermeden maliyetlerin
+              düşürülmesi işletmeler
               için hayati önem
               taşımaktadır. 2Das Veri Toplama Yazılımı ve Sistemlerimiz(İhtiyaç duyulan otomasyon sistemleri ile
               birlikte) gerçek zamanlı üretim yönetimini mümkün kılmaktadır.</p>
@@ -125,7 +127,7 @@
           <img src="./assets/2Bee_opt.svg" alt="2Bee" />
           <div class="card-body">
             <h2 class="card-title text-5xl">2Bee - ASRS</h2>
-            <p class="text-xl">İşletmelerde ürün hacmi ve çeşitliliğinin artması ile
+            <p class="text-xl drop-shadow-lg">İşletmelerde ürün hacmi ve çeşitliliğinin artması ile
               kullanılabilir depolama alanlarının daralması doğru
               ve hızlı erişim ihtiyacı robotik yükleme/boşaltma sistemlerinin kullanılmasını gerekli hale getirmiştir.
               Bu kapsamda mekanik iş ortağımız GMM ile depolama robotu, plc ve bilgisayar yazılımını kapsayan 2Bee AS/RS
@@ -137,10 +139,11 @@
         </div>
 
         <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/turkuvaz_atolye.svg" alt="Atolye" />
+          <img src="./assets/atolye.svg" alt="Atolye" />
           <div class="card-body">
             <h2 class="card-title text-5xl">Elektrik Pano İmalatı</h2>
-            <p class="text-xl"> SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan elektrik panoları,
+            <p class="text-xl drop-shadow-lg"> SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan
+              elektrik panoları,
               sisteminizin sorunsuz ve güvenli bir şekilde çalışmasını sağlar. Uzman ekibimiz, ihtiyaçlarınız
               doğrultusunda özel olarak tasarlanmış ve üretilmiş elektrik panoları sunarak, otomasyon sisteminizin en
               yüksek performansı vermesini garanti eder.</p>
@@ -152,6 +155,16 @@
 
       </div>
     </div>
+    <!-- Company Slider -->
+    <div class="logos">
+      <div class="logos-slide">
+        <!-- LOGOLAR -->
+      </div>
+    </div>
+    <script>
+      var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+    </script>
   </div>
 </template>
 
@@ -164,5 +177,59 @@ export default {
 <style scoped>
 * {
   font-weight: 500;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0 0 0;
+  background-color: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.logos:after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
 }
 </style>
