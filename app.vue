@@ -159,66 +159,72 @@
     <div class="logos">
       <div class="logos-slide">
         <!-- LOGOS -->
-        <img v-for="image in images" :src="image" />
+        <img src="./assets/ref/arcelik.jpg" />
+        <div v-for="image in images" :key="image.name">
+          <NuxtImg :src="`/images/${image.url}`" />
+        </div>
+
       </div>
     </div>
-    
+
   </div>
 </template>
 
 <script>
+import { ref } from 'vue';
 export default {
   name: 'Main Page',
-  data() {
+  setup() {
+    const images = ref([
+      { name: 'altek', url: 'altek.jpg' },
+      { name: 'altinay', url: 'altinay.png' },
+      { name: 'ankalogo', url: 'ankalogo.png' },
+      { name: 'arcelik', url: 'arcelik.jpg' },
+      { name: 'arel', url: 'arel.jpg' },
+      { name: 'besler_tekstil', url: 'besler_tekstil.jpg' },
+      { name: 'boydak', url: 'boydak.jpg' },
+      { name: 'boytas', url: 'boytas.jpg' },
+      { name: 'boyteks', url: 'boyteks.jpg' },
+      { name: 'calik-denim-logo', url: 'calik-denim-logo.jpg' },
+      { name: 'capar', url: 'capar.jpg' },
+      { name: 'cimpor', url: 'cimpor.png' },
+      { name: 'corobo', url: 'corobo.jpg' },
+      { name: 'emekkablo', url: 'emekkablo.png' },
+      { name: 'erciyes_mikron', url: 'erciyes_mikron.jpg' },
+      { name: 'erciyeskirec', url: 'erciyeskirec.jpg' },
+      { name: 'etk', url: 'etk.jpg' },
+      { name: 'ezinc', url: 'ezinc.jpg' },
+      { name: 'formsunger', url: 'formsunger.jpg' },
+      { name: 'gmm', url: 'gmm.jpg' },
+      { name: 'hes_kablo', url: 'hes_kablo.jpg' },
+      { name: 'istikbal', url: 'istikbal.jpg' },
+      { name: 'kaftan', url: 'kaftan.jpg' },
+      { name: 'kaski', url: 'kaski.jpg' },
+      { name: 'kaybitas', url: 'kaybitas.jpg' },
+      { name: 'kayseriukasim', url: 'kayseriulasim.png' },
+      { name: 'lenze', url: 'lenze.jpg' },
+      { name: 'lineer', url: 'lineer.jpg' },
+      { name: 'logoBoytas', url: 'logoBoytas.png' },
+      { name: 'meka', url: 'meka.jpg' },
+      { name: 'melikgazi', url: 'melikgazi.png' },
+      { name: 'merkez_celik', url: 'merkez_celik.jpg' },
+      { name: 'mert_makine', url: 'mert_makine.jpg' },
+      { name: 'mesa', url: 'mesa.jpg' },
+      { name: 'mondi', url: 'mondi.jpg' },
+      { name: 'nil', url: 'nil.jpg' },
+      { name: 'nkskablo', url: 'nkskablo.png' },
+      { name: 'nurol_1', url: 'nurol_1.jpg' },
+      { name: 'ortaanadolu', url: 'ortaanadolu.jpg' },
+      { name: 'ravaber', url: 'ravaber.png' },
+      { name: 'simfer', url: 'simfer.jpg' },
+      { name: 'sirikcioglu-logo', url: 'sirikcioglu-logo.png' },
+      { name: 'smgmuh', url: 'smgmuh.png' },
+      { name: 'tai', url: 'tai.png' },
+      { name: 'talas', url: 'talas.png' },
+      { name: 'tmo', url: 'tmo.jpg' }
+    ]);
     return {
-      images: [
-        './assets/ref/altek.jpg',
-        './assets/ref/altinay.png',
-        './assets/ref/ankalogo.png',
-        './assets/ref/arcelik.jpg',
-        './assets/ref/arel.jpg',
-        './assets/ref/besler_tekstil.jpg',
-        './assets/ref/boydak.jpg',
-        './assets/ref/boytas.jpg',
-        './assets/ref/boyteks.jpg',
-        './assets/ref/calik-denim-logo.jpg',
-        './assets/ref/capar.jpg',
-        './assets/ref/cimpor.jpg',
-        './assets/ref/corobo.jpg',
-        './assets/ref/emekkablo.png',
-        './assets/ref/erciyes_mikron.jpg',
-        './assets/ref/erciyeskirec.jpg',
-        './assets/ref/etk.jpg',
-        './assets/ref/ezinc.jpg',
-        './assets/ref/formsunger.jpg',
-        './assets/ref/gmm.jpg',
-        './assets/ref/hes_kablo.jpg',
-        './assets/ref/istikbal.jpg',
-        './assets/ref/kaftan.jpg',
-        './assets/ref/kaski.jpg',
-        './assets/ref/kaybitas.jpg',
-        './assets/ref/kayseriukasim.png',
-        './assets/ref/lenze.jpg',
-        './assets/ref/lineer.jpg',
-        './assets/ref/logoBoytas.png',
-        './assets/ref/meka.jpg',
-        './assets/ref/melikgazi.png',
-        './assets/ref/merkez_celik.jpg',
-        './assets/ref/mert_makine.jpg',
-        './assets/ref/mesa.jpg',
-        './assets/ref/mondi.jpg',
-        './assets/ref/nil.jpg',
-        './assets/ref/nkskablo.png',
-        './assets/ref/nurol_1.jpg',
-        './assets/ref/ortaanadolu.jpg',
-        './assets/ref/ravaber.png',
-        './assets/ref/simfer.jpg',
-        './assets/ref/sirikcioglu-logo.png',
-        './assets/ref/smgmuh.png',
-        './assets/ref/tai.png',
-        './assets/ref/talas.png',
-        './assets/ref/tmo.jpg',
-      ]
+      images
     }
   }
 }
