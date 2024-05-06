@@ -156,11 +156,14 @@
       </div>
     </div>
     <!-- Company Slider -->
-    <div class="logos">
-      <div class="logos-slide">
+    <div class="slider">
+      <div class="slide-track">
         <!-- LOGOS -->
-        <img src="./assets/ref/arcelik.jpg" />
-        <div v-for="image in images" :key="image.name">
+        <div v-for="image in images" :key="image.name" class="slide">
+          <NuxtImg :src="`/images/${image.url}`" />
+        </div>
+
+        <div v-for="image in images" :key="image.name" class="slide">
           <NuxtImg :src="`/images/${image.url}`" />
         </div>
 
@@ -246,16 +249,22 @@ export default {
   }
 }
 
-.logos {
-  overflow: hidden;
+.slider {
+  height: 150px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  /* overflow: hidden;
   padding: 60px 0;
   background: #13171b;
   white-space: nowrap;
-  position: relative;
+  position: relative; */
 }
 
-.logos:before,
-.logos:after {
+.slider:before,
+.slider:after {
   position: absolute;
   top: 0;
   width: 250px;
@@ -264,27 +273,34 @@ export default {
   z-index: 2;
 }
 
-.logos:before {
+.slider:before {
   left: 0;
   background: linear-gradient(to left, transparent, #1d232a);
 }
 
-.logos:after {
+.slider:after {
   right: 0;
   background: linear-gradient(to right, transparent, #1d232a);
 }
 
-.logos:hover .logos-slide {
+.slider:hover .slide-track {
   animation-play-state: paused;
 }
 
-.logos-slide {
-  display: inline-block;
+.slide-track {
+  display: flex;
   animation: 35s slide infinite linear;
 }
-
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
+slide{
+  display: flex;
+  align-items: center;
+  padding: 15px;
 }
+
+slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 </style>
