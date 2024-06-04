@@ -1,54 +1,13 @@
 <template>
   <title>Turkuvaz İnovasyon</title>
+  <Navbar />
   <div id="container">
-    <div class="navbar bg-base-200 justify-between">
-      <div>
-        <link class="btn btn-ghost text-xl">
-        <img src="assets\onlylogo.svg">
-        </link>
-        <ul class="menu menu-horizontal px-1 gap-x-4">
-          <!-- Services -->
-          <li>
-            <details class="dropdown">
-              <summary>Hizmetler</summary>
-              <ul class="p-2 shadow menu dropdown-content z-[1] w-52 bg-base-100 rounded-t-none">
-                <li><a>AS/RS Sistemleri</a></li>
-                <li><a>Endüstriyel Otomasyon</a></li>
-                <li><a>SCADA Sistemleri</a></li>
-                <li><a>Veri Toplama Sistemleri</a></li>
-                <li><a>Elektrik Pano İmalatı</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a>Müşterilerimiz</a></li>
-          <li><a>Hakkımızda</a></li>
-          <li><a>İletişim</a></li>
-        </ul>
-      </div>
-      <!-- Language Change -->
-      <div class="mx-10">
-        <ul class="menu menu-horizontal px-1 gap-x-4">
-          <li>
-            <details>
-              <summary>
-                Dil
-              </summary>
-              <ul class="p-2 bg-base-100 rounded-t-none">
-                <li><button>Türkçe</button></li>
-                <li><button>English</button></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
-      </div>
-    </div>
     <!-- Hero Content -->
     <div class="my-10 gap-8">
       <!-- Heading -->
       <div class="panel text-center mx-auto">
         <div class="flex-col items-center gap-2 text-white">
-          <h1 class="h2 sm:h1 lg:display-6 xl:display-4 my-4 sm:mt-0 text-4xl sm:text-5xl lg:text-6xl xl:text-7	"
-            style="transform: translateY(0px); opacity: 1;">
+          <h1 class="xl:text-7xl md:text-3xl">
             Endüstriyel Alanda<br class="d-none sm:d-block">
             Yenilikçi ve Profesyonel Çözümler
           </h1>
@@ -88,12 +47,27 @@
         </div>
       </div>
     </div>
+    <!-- Company Slider -->
+    <div class="slider">
+      <div class="slide-track">
+        <!-- LOGOS -->
+        <div v-for="image in images" :key="image.name" class="slide">
+          <NuxtImg :src="`/images/${image.url}`" />
+        </div>
+
+        <div v-for="image in images" :key="image.name" class="slide">
+          <NuxtImg :src="`/images/${image.url}`" />
+        </div>
+      </div>
+    </div>
     <!-- Cardbox -->
     <div class="w-9/12 my-10 mx-auto justify-center items-center">
       <div id="card-box" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-        <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/2Win_opt.svg" alt="2Win" />
+        <div class="card bg-slate-800 shadow-xl">
+          <figure class="w-11/12 2xl:ml-4 mt-4 self-center">
+            <img src="./assets/2Win_opt.svg" class="h-24" alt="2Win" />
+          </figure>
           <div class="card-body">
             <h2 class="card-title text-5xl">2Win - SCADA Sistemleri</h2>
             <p class="text-xl drop-shadow-lg">SCADA işletmeler için, işletme içinde veya dışında herhangi bir yerde
@@ -108,8 +82,10 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/2Mes_opt.svg" alt="2Mes" />
+        <div class="card bg-slate-800 shadow-xl">
+          <figure class="w-11/12 2xl:ml-4 mt-4 self-center">
+            <img src="./assets/2Mes_opt.svg" class="h-24" alt="2Mes" />
+          </figure>
           <div class="card-body">
             <h2 class="card-title text-5xl">2Mes- Veri Toplama Sistemi</h2>
             <p class="text-xl drop-shadow-lg">Günümüz rekabet koşullarında kaliteden ödün vermeden maliyetlerin
@@ -123,8 +99,10 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/2Bee_opt.svg" alt="2Bee" />
+        <div class="card bg-slate-800 shadow-xl">
+          <figure class="w-11/12 2xl:ml-4 mt-4 self-center">
+            <img src="./assets/2Bee_opt.svg" class="h-24" alt="2Bee" />
+          </figure>
           <div class="card-body">
             <h2 class="card-title text-5xl">2Bee - ASRS</h2>
             <p class="text-xl drop-shadow-lg">İşletmelerde ürün hacmi ve çeşitliliğinin artması ile
@@ -138,8 +116,10 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/atolye.svg" class="w-full self-center" alt="Atolye" />
+        <div class="card bg-slate-800 shadow-xl">
+          <figure class="w-11/12 2xl:ml-4 2xl:h-24 mt-4 self-center">
+            <img src="./assets/atolye.svg" class="h-24" alt="Atolye" />
+          </figure>
           <div class="card-body">
             <h2 class="card-title text-5xl">Elektrik Pano İmalatı</h2>
             <p class="text-xl drop-shadow-lg"> SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan
@@ -155,21 +135,8 @@
 
       </div>
     </div>
-    <!-- Company Slider -->
-    <div class="slider">
-      <div class="slide-track">
-        <!-- LOGOS -->
-        <div v-for="image in images" :key="image.name" class="slide">
-          <NuxtImg :src="`/images/${image.url}`" />
-        </div>
-
-        <div v-for="image in images" :key="image.name" class="slide">
-          <NuxtImg :src="`/images/${image.url}`" />
-        </div>
-      </div>
-    </div>
-
   </div>
+  <Footer />
 </template>
 
 <script>
@@ -206,7 +173,6 @@ export default {
       { name: 'lenze', url: 'lenze.jpg' },
       { name: 'lineer', url: 'lineer.jpg' },
       { name: 'logoBoytas', url: 'logoBoytas.png' },
-      { name: 'meka', url: 'meka.jpg' },
       { name: 'melikgazi', url: 'melikgazi.png' },
       { name: 'merkez_celik', url: 'merkez_celik.jpg' },
       { name: 'mert_makine', url: 'mert_makine.jpg' },
@@ -249,13 +215,12 @@ export default {
 
 .slider {
   height: 150px;
+  width: 75%;
   margin: auto;
   position: relative;
   display: grid;
   place-items: center;
   overflow-x: hidden;
-  overflow: hidden;
-  background: #13171b;
 }
 
 .slider:before,
@@ -286,22 +251,22 @@ export default {
   display: flex;
   height: 100%;
   animation: 100s slide infinite linear;
-  
 }
 
 .slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: white;
-  border-radius: 15px; */
-  width: 200px;
-  height: 100%;
-  margin-right: 10px;
+  border-right: 1px dashed oklch(var(--pc));
+  border-left: 1px transparent;
+  width: 215px;
+  justify-content: center;
 }
 
-slide>img {
+.slide>img {
   object-fit: fill;
-  width: 100%;
+  min-width: 60%;
+  max-width: 90%;
+  max-height: 90%;
 }
 </style>
