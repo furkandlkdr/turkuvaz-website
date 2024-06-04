@@ -20,7 +20,7 @@
                 </li>
                 <li><a>Müşterilerimiz</a></li>
                 <li><a>Hakkımızda</a></li>
-                <li><a>İletişim</a></li>
+                <li><NuxtLink to="contact">İletişim</NuxtLink></li>
             </ul>
         </div>
         <!-- Language Change -->

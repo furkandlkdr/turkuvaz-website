@@ -52,7 +52,7 @@
       <div class="slide-track">
         <!-- LOGOS -->
         <div v-for="image in images" :key="image.name" class="slide">
-          <NuxtImg :src="`/images/${image.url}`" />
+          <NuxtImg :src="`/images/${image.url}`"/>
         </div>
 
         <div v-for="image in images" :key="image.name" class="slide">
@@ -250,7 +250,7 @@ export default {
 .slide-track {
   display: flex;
   height: 100%;
-  animation: 100s slide infinite linear;
+  animation: 150s slide infinite linear;
 }
 
 .slide {
