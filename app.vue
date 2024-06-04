@@ -139,7 +139,7 @@
         </div>
 
         <div class="card bg-base-100 shadow-xl image-full">
-          <img src="./assets/atolye.svg" alt="Atolye" />
+          <img src="./assets/atolye.svg" class="w-full self-center" alt="Atolye" />
           <div class="card-body">
             <h2 class="card-title text-5xl">Elektrik Pano İmalatı</h2>
             <p class="text-xl drop-shadow-lg"> SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan
@@ -166,7 +166,6 @@
         <div v-for="image in images" :key="image.name" class="slide">
           <NuxtImg :src="`/images/${image.url}`" />
         </div>
-
       </div>
     </div>
 
@@ -190,7 +189,6 @@ export default {
       { name: 'boyteks', url: 'boyteks.jpg' },
       { name: 'calik-denim-logo', url: 'calik-denim-logo.jpg' },
       { name: 'capar', url: 'capar.jpg' },
-      { name: 'cimpor', url: 'cimpor.png' },
       { name: 'corobo', url: 'corobo.jpg' },
       { name: 'emekkablo', url: 'emekkablo.png' },
       { name: 'erciyes_mikron', url: 'erciyes_mikron.jpg' },
@@ -245,7 +243,7 @@ export default {
   }
 
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -253,14 +251,11 @@ export default {
   height: 150px;
   margin: auto;
   position: relative;
-  width: 100%;
   display: grid;
   place-items: center;
-  /* overflow: hidden;
-  padding: 60px 0;
+  overflow-x: hidden;
+  overflow: hidden;
   background: #13171b;
-  white-space: nowrap;
-  position: relative; */
 }
 
 .slider:before,
@@ -289,18 +284,24 @@ export default {
 
 .slide-track {
   display: flex;
-  animation: 35s slide infinite linear;
+  height: 100%;
+  animation: 100s slide infinite linear;
+  
 }
-slide{
+
+.slide {
   display: flex;
   align-items: center;
-  padding: 15px;
-}
-
-slide > img {
-  width: 100%;
+  justify-content: center;
+  /* background-color: white;
+  border-radius: 15px; */
+  width: 200px;
   height: 100%;
-  object-fit: contain;
+  margin-right: 10px;
 }
 
+slide>img {
+  object-fit: fill;
+  width: 100%;
+}
 </style>
