@@ -60,21 +60,8 @@
                 </div>
             </div>
         </div>
-        <!-- Company Slider -->
-        <div class="slider">
-            <div class="slide-track">
-                <!-- LOGOS -->
-                <div v-for="image in images" :key="image.name" class="slide">
-                    <NuxtImg :src="`images/${image.url}`" />
-                </div>
-
-                <div v-for="image in images" :key="image.name" class="slide">
-                    <NuxtImg :src="`/images/${image.url}`" />
-                </div>
-            </div>
-        </div>
         <!-- Cardbox -->
-        <div class="w-9/12 my-10 mx-auto justify-center items-center">
+        <div class="w-9/12 mt-10 mx-auto justify-center items-center">
             <div id="card-box" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <div class="card bg-slate-800 shadow-xl">
@@ -158,6 +145,21 @@
 
             </div>
         </div>
+        <!-- Company Slider -->
+        <div class="slider h-220 w-3/4 mx-auto relative grid place-items-center overflow-x-hidden">
+            <div class="slide-track">
+                <!-- LOGOS -->
+                <div v-for="image in images" :key="image.name"
+                    class="slide flex items-center justify-center w-56 h-full">
+                    <NuxtImg :src="`images/${image.url}`" />
+                </div>
+
+                <div v-for="image in images" :key="image.name"
+                    class="slide flex items-center justify-center w-56 h-full">
+                    <NuxtImg :src="`/images/${image.url}`" />
+                </div>
+            </div>
+        </div>
     </div>
     <Footer />
 </template>
@@ -168,37 +170,37 @@ export default {
     name: 'Main Page',
     setup() {
         const images = ref([
-            {name: 'alinay', url: 'alinay.png'},
-            {name: 'anka', url: 'anka.png'},
-            {name: 'arcelik', url: 'arcelik.png'},
-            {name: 'argea', url: 'argea.png'},
-            {name: 'bellona', url: 'bellona.png'},
-            {name: 'boyteks', url: 'boyteks.png'},
-            {name: 'calik_denim', url: 'calik_denim.png'},
-            {name: 'dogtas', url: 'dogtas.png'},
-            {name: 'form_sunger', url: 'form_sunger.png'},
-            {name: 'gelal', url: 'gelal.png'},
-            {name: 'guven_muhendislik_makina', url: 'guven_muhendislik_makina.png'},
-            {name: 'istikbal', url: 'istikbal.png'},
-            {name: 'kaski', url: 'kaski.png'},
-            {name: 'kayseri_osb', url: 'kayseri_osb.png'},
-            {name: 'kayseri_ulasim', url: 'kayseri_ulasim.png'},
-            {name: 'kelebek', url: 'kelebek.png'},
-            {name: 'lineer_makina', url: 'lineer_makina.png'},
-            {name: 'melikgazi_belediyesi', url: 'melikgazi_belediyesi.png'},
-            {name: 'mesa', url: 'mesa.png'},
-            {name: 'mondi', url: 'mondi.png'},
-            {name: 'nks_kablo', url: 'nks_kablo.png'},
-            {name: 'nurol_teknoloji', url: 'nurol_teknoloji.png'},
-            {name: 'orta_anadolu', url: 'orta_anadolu.png'},
-            {name: 'rabago', url: 'rabago.png'},
-            {name: 'simfer', url: 'simfer.png'},
-            {name: 'sirikcioglu', url: 'sirikcioglu.png'},
-            {name: 'smg_makina', url: 'smg_makina.png'},
-            {name: 'tai', url: 'tai.png'},
-            {name: 'talas_belediyesi', url: 'talas_belediyesi.svg'},
-            {name: 'turkish_technic', url: 'turkish_technic.png'},
-            {name: 'vibroblok', url: 'vibroblok.png'},
+            { name: 'altinay', url: 'altinay.png' },
+            { name: 'anka', url: 'anka.png' },
+            { name: 'arcelik', url: 'arcelik.png' },
+            { name: 'argea', url: 'argea.png' },
+            { name: 'bellona', url: 'bellona.png' },
+            { name: 'boyteks', url: 'boyteks.png' },
+            { name: 'calik_denim', url: 'calik_denim.png' },
+            { name: 'dogtas', url: 'dogtas.png' },
+            { name: 'form_sunger', url: 'form_sunger.png' },
+            { name: 'gelal', url: 'gelal.png' },
+            { name: 'guven_muhendislik_makina', url: 'guven_muhendislik_makina.png' },
+            { name: 'istikbal', url: 'istikbal.png' },
+            { name: 'kaski', url: 'kaski.png' },
+            { name: 'kayseri_osb', url: 'kayseri_osb.png' },
+            { name: 'kayseri_ulasim', url: 'kayseri_ulasim.png' },
+            { name: 'kelebek', url: 'kelebek.png' },
+            { name: 'lineer_makina', url: 'lineer_makina.png' },
+            { name: 'melikgazi_belediyesi', url: 'melikgazi_belediyesi.png' },
+            { name: 'mesa', url: 'mesa.png' },
+            { name: 'mondi', url: 'mondi.png' },
+            { name: 'nks_kablo', url: 'nks_kablo.png' },
+            { name: 'nurol_teknoloji', url: 'nurol_teknoloji.png' },
+            { name: 'orta_anadolu', url: 'orta_anadolu.png' },
+            { name: 'ravago', url: 'ravago.png' },
+            { name: 'simfer', url: 'simfer.png' },
+            { name: 'sirikcioglu', url: 'sirikcioglu.png' },
+            { name: 'smg_makina', url: 'smg_makina.png' },
+            { name: 'tai', url: 'tai.png' },
+            { name: 'talas_belediyesi', url: 'talas_belediyesi.svg' },
+            { name: 'turkish_technic', url: 'turkish_technic.png' },
+            { name: 'vibroblok', url: 'vibroblok.png' },
 
         ]);
         const currentIndex = ref(0);
@@ -247,16 +249,6 @@ export default {
     }
 }
 
-.slider {
-    height: 150px;
-    width: 75%;
-    margin: auto;
-    position: relative;
-    display: grid;
-    place-items: center;
-    overflow-x: hidden;
-}
-
 .slider:before,
 .slider:after {
     position: absolute;
@@ -264,7 +256,7 @@ export default {
     width: 250px;
     height: 100%;
     content: "";
-    z-index: 2;
+    z-index: 1;
 }
 
 .slider:before {
@@ -283,25 +275,19 @@ export default {
 
 .slide-track {
     display: flex;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 80%;
     animation: 150s slide infinite linear;
-}
-
-.slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border-right: 1px dashed oklch(var(--pc)); */
-    border-left: 1px transparent;
-    width: 215px;
-    justify-content: center;
 }
 
 .slide>img {
     object-fit: fill;
     min-width: 60%;
     max-width: 90%;
-    max-height: 90%;
+    max-height: 95%;
+}
+
+.slide>img:hover {
+    scale: 1.2;
 }
 </style>
