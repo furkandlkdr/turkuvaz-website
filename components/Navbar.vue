@@ -31,7 +31,7 @@
                         <summary>
                             Dil
                         </summary>
-                        <ul class="p-2 bg-base-100 rounded-t-none">
+                        <ul class="p-2 bg-base-100 z-10">
                             <li><button>Türkçe</button></li>
                             <li><button>English</button></li>
                         </ul>
