@@ -9,7 +9,7 @@
                 <li>
                     <details class="dropdown">
                         <summary>Hizmetler</summary>
-                        <ul class="p-2 shadow menu dropdown-content z-[1] w-52 bg-base-100 rounded-t-none">
+                        <ul class="p-2 shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none">
                             <li><a>AS/RS Sistemleri</a></li>
                             <li><a>Endüstriyel Otomasyon</a></li>
                             <li><a>SCADA Sistemleri</a></li>
@@ -47,3 +47,6 @@ export default {
     name: 'Navbar'
 }
 </script>
+
+<style scoped>
+</style>

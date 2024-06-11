@@ -1,7 +1,7 @@
 <template>
     <title>Turkuvaz İnovasyon</title>
-    <Navbar />
-    <div id="container">
+    <Navbar class="fixed top-0 left-0 right-0 z-20 lg:h-auto h-20" />
+    <div class="mt-24">
         <!-- Hero Content -->
         <div class="my-10 gap-8">
             <!-- Heading -->
@@ -290,5 +290,6 @@ export default {
 
 .slide>img:hover {
     scale: 1.2;
+    cursor: pointer;
 }
 </style>
