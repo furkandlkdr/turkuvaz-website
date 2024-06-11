@@ -14,44 +14,11 @@
                 </div>
             </div>
             <!-- Carousel -->
-            <!-- <div class="my-10 mx-auto w-9/12 justify-center items-center">
-                <div class="carousel">
-                    <div id="slide1" class="carousel-item relative w-full">
-                        <img src="~/assets/slide1.jpg" class="w-full" />
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide4" class="btn btn-circle">❮</a>
-                            <a href="#slide2" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                    <div id="slide2" class="carousel-item relative w-full">
-                        <img src="~/assets/slide2.jpg" class="w-full" />
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide1" class="btn btn-circle">❮</a>
-                            <a href="#slide3" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                    <div id="slide3" class="carousel-item relative w-full">
-                        <img src="~/assets/slide3.jpg" class="w-full" />
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide2" class="btn btn-circle">❮</a>
-                            <a href="#slide4" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                    <div id="slide4" class="carousel-item relative w-full">
-                        <img src="~/assets/slide4.jpg" class="w-full" />
-                        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                            <a href="#slide3" class="btn btn-circle">❮</a>
-                            <a href="#slide1" class="btn btn-circle">❯</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="my-10 mx-auto w-9/12 justify-center items-center">
                 <div class="carousel relative">
                     <div v-for="(image, index) in carousel_images" :key="index"
-                        class="carousel-item relative w-full transition-opacity duration-700"
-                        :class="{ 'opacity-100': index === currentIndex, 'opacity-0': index !== currentIndex }">
-                        <NuxtImg :src="`images/slides/${image}`" class="w-full" />
+                        class="carousel-item relative w-full transition-opacity duration-700" :class="carouselOpacity">
+                        <NuxtImg :src="`images/slides/${image}`" class="w-full"/>
                     </div>
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <button @click="prevSlide" class="btn btn-circle">❮</button>
@@ -161,6 +128,7 @@
             </div>
         </div>
     </div>
+    <AboutUs />
     <Contact />
     <Footer />
 </template>
@@ -204,7 +172,7 @@ export default {
             { name: 'vibroblok', url: 'vibroblok.png' },
 
         ]);
-        const currentIndex = ref(0);
+        const carouselOpacity = ref("opacity-100");
         const carousel_images = ref([
             'slide1.jpg',
             'slide2.jpg',
@@ -213,18 +181,22 @@ export default {
         ]);
 
         const prevSlide = () => {
-            currentIndex.value =
-                currentIndex.value > 0 ? currentIndex.value - 1 : carousel_images.length - 1;
-            console.log(currentIndex.value);
+            carouselOpacity.value = "opacity-0";
+            setTimeout(() => {
+                carousel_images.value.unshift(carousel_images.value.pop())
+                carouselOpacity.value = "opacity-100";
+            }, 400)
         }
         const nextSlide = () => {
-            currentIndex.value =
-                currentIndex.value < carousel_images.length - 1 ? currentIndex.value + 1 : 0;
-            console.log(currentIndex.value);
+            carouselOpacity.value = "opacity-0";
+            setTimeout(() => {
+                carousel_images.value.push(carousel_images.value.shift())
+                carouselOpacity.value = "opacity-100";
+            }, 400)
         }
         return {
             images,
-            currentIndex,
+            carouselOpacity,
             carousel_images,
             prevSlide,
             nextSlide

@@ -54,7 +54,7 @@
                     <div class="w-full flex flex-col">
                         <label for="message" class="label">Mesaj:</label>
                         <textarea id="message" v-model="message" required
-                            class="input input-bordered input-primary input-lg w-full min-h-60 mb-4"></textarea>
+                            class="textarea textarea-primary input-lg w-full min-h-60 mb-4"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success text-gray-50 ">Gönder</button>
                 </form>
