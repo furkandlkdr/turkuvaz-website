@@ -1,28 +1,46 @@
 <template>
-    <div class="container mx-auto py-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h2 class="text-xl font-bold mb-4">Service 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h2 class="text-xl font-bold mb-4">Service 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+    <div class="flex max-lg:flex-col mx-auto w-9/12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 xl:gap-8 w-full lg:w-1/2 items-center">
+            <!-- Card 1 - 2 -->
+            <div class="flex flex-col gap-4">
+                <!-- Card 1 -->
+                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4">Service 1</h2>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4">Service 2</h2>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <h2 class="text-xl font-bold mb-4">Service 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+            <div class="flex max-lg:flex-col gap-4 max-lg:mt-8">
+                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-bold mb-4">Ana İlkelerimiz:</h2>
+                    <ul class="text-xl">
+                        <li>* Müşterilerimize son teknolojiyi ekonomik bir biçimde sunmak</li>
+                        <li>* Mümkün olan en iyi kullanıcı deneyimini sağlamak</li>
+                        <li>* Yeni teknolojilerin geliştirilmesi için arge çalışmaları yapmak</li>
+                        <li>* Müşterilerimizin isteklerini kaliteden ödün vermeden gerçekleştirmek</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div class="mt-8">
-            <h2 class="text-2xl font-bold mb-4">Company Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+        <!-- Info -->
+        <div class="flex flex-col lg:mx-8 w-full lg:w-1/2 max-lg:mt-4">
+            <h2 class="text-2xl font-bold mb-4">Turkuvaz İnovasyon</h2>
+            <p class="text-lg">Turkuvaz İnovasyon endüstriyel otomasyon sektöründe, bilgisayar ve PLC yazılımları
+                konusunda hizmet
+                vermek amacıyla 2011 yılında kurulmuştur. Firmamız AS/RS (Otomatik Yükleme / Boşaltma Sistemleri), Scada
+                Sistemleri, Veri Toplama Sistemleri gibi başlıca konularda geliştirdiğimiz otomasyon projeleri ve
+                yazılımları ile sektörde yerini almıştır. Bu temel konular yanında müşteri ihtiyacına göre özel çözümler
+                de geliştirebilmekteyiz.</p>
+            <br>
+            <p class="text-lg">Bilgisayar ve elektronik mühendislerinden oluşan tecrübeli ekibimiz, sizin için en uygun
+                çözümleri
+                üretmeyi amaç edinmiştir.</p>
         </div>
     </div>
 </template>

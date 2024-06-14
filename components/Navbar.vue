@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar font-sans font-bold  bg-base-200 justify-between">
+    <div class="navbar font-sans font-bold bg-base-200 justify-between fixed top-0 left-0 right-0 z-20 lg:h-auto h-20">
         <div class="gap-x-8">
             <a class="btn btn-ghost text-xl">
                 <img src="assets/onlylogo.svg" alt="logo">
@@ -20,7 +20,7 @@
                 </li>
                 <li><a>Müşterilerimiz</a></li>
                 <li><a>Hakkımızda</a></li>
-                <li><NuxtLink to="contact">İletişim</NuxtLink></li>
+                <li><a>İletişim</a></li>
             </ul>
         </div>
         <!-- Language Change -->
@@ -48,5 +48,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
