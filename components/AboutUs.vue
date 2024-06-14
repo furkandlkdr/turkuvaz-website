@@ -5,13 +5,16 @@
             <div class="flex flex-col gap-4">
                 <!-- Card 1 -->
                 <div class="card bg-base-200 rounded-lg shadow-lg p-6">
-                    <h2 class="text-2xl font-bold mb-4">Service 1</h2>
-                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                    <h2 class="text-2xl font-bold mb-4">Otomasyon Hakkında Her Şey</h2>
+                    <p class="text-lg">Elektrik Panosu Dahil Otomasyon Sistemleri</p>
+                    <p class="text-lg">Scada Sistemleri</p>
+                    <p class="text-lg">Veri Toplama Sistemleri</p>
+                    <p class="text-lg">Otomatik Depolama Sistemleri</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="card bg-base-200 rounded-lg shadow-lg p-6">
-                    <h2 class="text-2xl font-bold mb-4">Service 2</h2>
-                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                    <h2 class="text-2xl font-bold mb-4">Yenilikçi ve Profesyonel Çözümler</h2>
+                    <p class="text-lg">İhtiyaçlarınıza Özel Çözümler</p>
                 </div>
             </div>
 
@@ -20,9 +23,9 @@
                 <div class="card bg-base-200 rounded-lg shadow-lg p-6">
                     <h2 class="text-2xl font-bold mb-4">Ana İlkelerimiz:</h2>
                     <ul class="text-xl">
-                        <li>* Müşterilerimize son teknolojiyi ekonomik bir biçimde sunmak</li>
-                        <li>* Mümkün olan en iyi kullanıcı deneyimini sağlamak</li>
-                        <li>* Yeni teknolojilerin geliştirilmesi için arge çalışmaları yapmak</li>
+                        <li>* Müşterilerimize son teknolojiyi ekonomik bir biçimde sunmak</li> <br>
+                        <li>* Mümkün olan en iyi kullanıcı deneyimini sağlamak</li> <br>
+                        <li>* Yeni teknolojilerin geliştirilmesi için arge çalışmaları yapmak</li> <br>
                         <li>* Müşterilerimizin isteklerini kaliteden ödün vermeden gerçekleştirmek</li>
                     </ul>
                 </div>
