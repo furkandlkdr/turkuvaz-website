@@ -1,4 +1,5 @@
 <template>
+  <title> {{ service.systemName + " " + service.title }} </title>
   <div>
     <!-- Navbar -->
     <div class="h-12">
@@ -8,7 +9,7 @@
     <div class="container mx-auto my-10">
       <div class="flex">
         <div class="w-1/3">
-          <h1 class="text-3xl font-bold">{{service.systemName + " " + service.title }}</h1>
+          <h1 class="text-3xl font-bold">{{ service.systemName + " " + service.title }}</h1>
           <!-- TODO: Add a carusel or image gallery -->
           <div v-for="image in service.images" :key="id">
             <NuxtImg :src="image" alt="" class="mt-4 w-full" />
@@ -24,7 +25,7 @@
         </div>
       </div>
     </div>
-    
+
     <Footer />
   </div>
 </template>
@@ -48,5 +49,4 @@ const parseList = (list) => {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
