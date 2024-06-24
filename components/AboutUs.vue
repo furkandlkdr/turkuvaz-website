@@ -4,7 +4,7 @@
             <!-- Card 1 - 2 -->
             <div class="flex flex-col gap-4">
                 <!-- Card 1 -->
-                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                <div class="card bg-base-200 rounded-lg shadow-md p-6">
                     <h2 class="text-2xl font-bold mb-4">Otomasyon Hakkında Her Şey</h2>
                     <p class="text-lg">Elektrik Panosu Dahil Otomasyon Sistemleri</p>
                     <p class="text-lg">Scada Sistemleri</p>
@@ -12,7 +12,7 @@
                     <p class="text-lg">Otomatik Depolama Sistemleri</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                <div class="card bg-base-200 rounded-lg shadow-md p-6">
                     <h2 class="text-2xl font-bold mb-4">Yenilikçi ve Profesyonel Çözümler</h2>
                     <p class="text-lg">İhtiyaçlarınıza Özel Çözümler</p>
                 </div>
@@ -20,7 +20,7 @@
 
             <!-- Card 3 -->
             <div class="flex max-lg:flex-col gap-4 max-lg:mt-8">
-                <div class="card bg-base-200 rounded-lg shadow-lg p-6">
+                <div class="card bg-base-200 rounded-lg shadow-md p-6">
                     <h2 class="text-2xl font-bold mb-4">Ana İlkelerimiz:</h2>
                     <ul class="text-xl">
                         <li>* Müşterilerimize son teknolojiyi ekonomik bir biçimde sunmak</li> <br>
