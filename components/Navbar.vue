@@ -17,7 +17,7 @@
                         </ul>
                     </details>
                 </li>
-                <li><NuxtLink to="References">Müşterilerimiz</NuxtLink></li>
+                <li><NuxtLink to="/references">Müşterilerimiz</NuxtLink></li>
                 <li><a>Hakkımızda</a></li>
                 <li><a>İletişim</a></li>
             </ul>
