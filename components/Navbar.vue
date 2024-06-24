@@ -1,9 +1,9 @@
 <template>
     <div class="navbar font-sans font-bold bg-base-200 justify-between fixed top-0 left-0 right-0 z-20 lg:h-auto h-20">
         <div class="gap-x-8" v-if="!isMobile">
-            <a class="btn btn-ghost text-xl">
+            <NuxtLink to="/" class="btn btn-ghost text-xl">
                 <img src="assets/onlylogo.svg" alt="logo">
-            </a>
+            </NuxtLink>
             <ul class="text-xl menu menu-horizontal gap-x-8">
                 <!-- Services -->
                 <li>
@@ -17,7 +17,7 @@
                         </ul>
                     </details>
                 </li>
-                <li><a>Müşterilerimiz</a></li>
+                <li><NuxtLink to="References">Müşterilerimiz</NuxtLink></li>
                 <li><a>Hakkımızda</a></li>
                 <li><a>İletişim</a></li>
             </ul>
@@ -32,8 +32,7 @@
                 </svg>
                 <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                     viewBox="0 0 512 512">
-                    <polygon
-                        points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 
+                    <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 
                         366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
                 </svg>
             </label>
