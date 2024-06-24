@@ -27,7 +27,7 @@ export const reference_images = [
     { name: 'sirikcioglu', url: 'sirikcioglu.png' },
     { name: 'smg_makina', url: 'smg_makina.png' },
     { name: 'tai', url: 'tai.png' },
-    { name: 'talas_belediyesi', url: 'talas_belediyesi.svg' },
+    { name: 'talas_belediyesi', url: 'talas_belediyesi.png' },
     { name: 'turkish_technic', url: 'turkish_technic.png' },
     { name: 'vibroblok', url: 'vibroblok.png' },
 ];
