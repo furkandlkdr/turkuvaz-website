@@ -10,11 +10,10 @@
                     <details class="dropdown">
                         <summary>Hizmetler</summary>
                         <ul class="p-2 text-xl shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none">
-                            <li><a>AS/RS Sistemleri</a></li>
-                            <li><a>Endüstriyel Otomasyon</a></li>
-                            <li><a>SCADA Sistemleri</a></li>
-                            <li><a>Veri Toplama Sistemleri</a></li>
-                            <li><a>Elektrik Pano İmalatı</a></li>
+                            <li v-for="service in services" :key="service.id">
+                                <NuxtLink :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
+                            </li>
+                            <!-- <li><a>Elektrik Pano İmalatı</a></li> -->
                         </ul>
                     </details>
                 </li>
@@ -60,12 +59,14 @@
 
 <script>
 import { useMediaQuery } from '@vueuse/core';
+import { services } from '~/data/services.js';
 export default {
     name: 'Navbar',
     setup() {
         const isMobile = useMediaQuery('(max-width: 768px)');
         return {
-            isMobile
+            isMobile,
+            services,
         };
     }
 }
