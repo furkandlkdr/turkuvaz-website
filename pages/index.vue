@@ -124,12 +124,12 @@
             <div class="slider h-220 w-3/4 mx-auto relative grid place-items-center overflow-x-hidden">
                 <div class="slide-track">
                     <!-- LOGOS -->
-                    <div v-for="image in reference_images" :key="image.name"
+                    <div v-for="image in references" :key="image.name"
                         class="slide flex items-center justify-center w-56 h-full">
                         <NuxtImg :src="`images/${image.url}`" />
                     </div>
 
-                    <div v-for="image in reference_images" :key="image.name"
+                    <div v-for="image in references" :key="image.name"
                         class="slide flex items-center justify-center w-56 h-full">
                         <NuxtImg :src="`/images/${image.url}`" />
                     </div>
@@ -144,7 +144,7 @@
 
 <script>
 import { ref } from 'vue';
-import { reference_images } from '~/data/reference_images.js';
+import { references } from '~/data/references.js';
 export default {
     name: 'Main Page',
     setup() {
@@ -172,7 +172,7 @@ export default {
             }, 400)
         }
         return {
-            reference_images,
+            references,
             carouselOpacity,
             carousel_images,
             prevSlide,
