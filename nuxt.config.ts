@@ -11,5 +11,8 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image'],
   image: {
     dir: 'static',
-  }
+  },
+  plugins: [
+    '~/plugins/hover-open.js',
+  ],
 })
