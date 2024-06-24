@@ -21,7 +21,7 @@
                 <div class="carousel relative">
                     <div v-for="(image, index) in carousel_images" :key="index"
                         class="carousel-item relative w-full transition-opacity duration-700" :class="carouselOpacity">
-                        <NuxtImg :src="`images/slides/${image}`" class="w-full" />
+                        <NuxtImg :src="`slides/${image}`" class="w-full" />
                     </div>
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <button @click="prevSlide" class="btn btn-circle">❮</button>
