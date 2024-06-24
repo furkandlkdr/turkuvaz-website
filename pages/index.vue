@@ -123,12 +123,12 @@
         <div class="slider h-220 w-3/4 mx-auto relative grid place-items-center overflow-x-hidden">
             <div class="slide-track">
                 <!-- LOGOS -->
-                <div v-for="image in images" :key="image.name"
+                <div v-for="image in reference_images" :key="image.name"
                     class="slide flex items-center justify-center w-56 h-full">
                     <NuxtImg :src="`images/${image.url}`" />
                 </div>
 
-                <div v-for="image in images" :key="image.name"
+                <div v-for="image in reference_images" :key="image.name"
                     class="slide flex items-center justify-center w-56 h-full">
                     <NuxtImg :src="`/images/${image.url}`" />
                 </div>
@@ -143,43 +143,11 @@
 
 <script>
 import { ref } from 'vue';
+import { reference_images } from '~/data/reference_images.js';
 export default {
     name: 'Main Page',
     setup() {
-        const images = ref([
-            { name: 'altinay', url: 'altinay.png' },
-            { name: 'anka', url: 'anka.png' },
-            { name: 'arcelik', url: 'arcelik.png' },
-            { name: 'argea', url: 'argea.png' },
-            { name: 'bellona', url: 'bellona.png' },
-            { name: 'boyteks', url: 'boyteks.png' },
-            { name: 'calik_denim', url: 'calik_denim.png' },
-            { name: 'dogtas', url: 'dogtas.png' },
-            { name: 'form_sunger', url: 'form_sunger.png' },
-            { name: 'gelal', url: 'gelal.png' },
-            { name: 'guven_muhendislik_makina', url: 'guven_muhendislik_makina.png' },
-            { name: 'istikbal', url: 'istikbal.png' },
-            { name: 'kaski', url: 'kaski.png' },
-            { name: 'kayseri_osb', url: 'kayseri_osb.png' },
-            { name: 'kayseri_ulasim', url: 'kayseri_ulasim.png' },
-            { name: 'kelebek', url: 'kelebek.png' },
-            { name: 'lineer_makina', url: 'lineer_makina.png' },
-            { name: 'melikgazi_belediyesi', url: 'melikgazi_belediyesi.png' },
-            { name: 'mesa', url: 'mesa.png' },
-            { name: 'mondi', url: 'mondi.png' },
-            { name: 'nks_kablo', url: 'nks_kablo.png' },
-            { name: 'nurol_teknoloji', url: 'nurol_teknoloji.png' },
-            { name: 'orta_anadolu', url: 'orta_anadolu.png' },
-            { name: 'ravago', url: 'ravago.png' },
-            { name: 'simfer', url: 'simfer.png' },
-            { name: 'sirikcioglu', url: 'sirikcioglu.png' },
-            { name: 'smg_makina', url: 'smg_makina.png' },
-            { name: 'tai', url: 'tai.png' },
-            { name: 'talas_belediyesi', url: 'talas_belediyesi.svg' },
-            { name: 'turkish_technic', url: 'turkish_technic.png' },
-            { name: 'vibroblok', url: 'vibroblok.png' },
-
-        ]);
+        
         const carouselOpacity = ref("opacity-100");
         const carousel_images = ref([
             'slide1.jpg',
@@ -203,7 +171,7 @@ export default {
             }, 400)
         }
         return {
-            images,
+            reference_images,
             carouselOpacity,
             carousel_images,
             prevSlide,
