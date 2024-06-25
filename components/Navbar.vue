@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar font-sans font-bold bg-base-200 justify-between fixed top-0 left-0 right-0 z-20 lg:h-auto h-20">
+    <div class="navbar font-sans font-bold bg-base-300 justify-between fixed top-0 left-0 right-0 z-20 lg:h-auto h-20">
         <div class="gap-x-8" v-if="!isMobile">
             <NuxtLink to="/" class="btn btn-ghost text-xl">
                 <img src="assets/onlylogo.svg" alt="logo">
@@ -17,9 +17,11 @@
                         </ul>
                     </details>
                 </li>
-                <li><NuxtLink to="/references">Müşterilerimiz</NuxtLink></li>
-                <li><a>Hakkımızda</a></li>
-                <li><a>İletişim</a></li>
+                <li>
+                    <NuxtLink to="/references">Müşterilerimiz</NuxtLink>
+                </li>
+                <li><a @click="scrollToAboutUs">Hakkımızda</a></li>
+                <li><a @click="scrollToContact">İletişim</a></li>
             </ul>
         </div>
         <!-- Mobile menu -->
@@ -63,9 +65,24 @@ export default {
     name: 'Navbar',
     setup() {
         const isMobile = useMediaQuery('(max-width: 768px)');
+        const route = useRoute();
+        const router = useRouter();
+        const scrollToAboutUs = () => {
+            if (route.path === '/') {
+                document.getElementById('AboutUs').scrollIntoView({ behavior: 'smooth' });
+            } else router.push('/#AboutUs');
+
+        };
+        const scrollToContact = () => {
+            if (route.path === '/') {
+                document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' });
+            } else router.push('/#Contact');
+        };
         return {
             isMobile,
             services,
+            scrollToAboutUs,
+            scrollToContact
         };
     }
 }
