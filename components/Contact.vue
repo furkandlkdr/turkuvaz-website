@@ -6,34 +6,34 @@
                 <div class="h-64">
                     <h1 class="card-title text-3xl">Turkuvaz İnovasyon</h1>
                     <h2 class="text-xl mb-2">Sistem Çözümleri A.Ş.</h2>
-                    <p class="text-gray-50">Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi</p>
-                    <p class="text-gray-50">5.Bina Kat: 1 No: 67-4/66</p>
-                    <p class="text-gray-50">Melikgazi / KAYSERİ</p>
-                    <p class="text-gray-50">TÜRKİYE</p>
-                    <p class="text-gray-50">Tel : +90 352 311 55 67</p>
-                    <p class="text-gray-50">Faks : +90 352 311 55 87</p>
+                    <p>Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi</p>
+                    <p>5.Bina Kat: 1 No: 67-4/66</p>
+                    <p>Melikgazi / KAYSERİ</p>
+                    <p>TÜRKİYE</p>
+                    <p>Tel : +90 352 311 55 67</p>
+                    <p>Faks : +90 352 311 55 87</p>
                 </div>
                 <div class="flex flex-col gap-4 max-lg:mx-auto lg:gap-4">
                     <div>
-                        <p class="text-gray-50 font-semibold">Staj başvurularınız için</p>
-                        <p class="text-gray-50">E: <a href="mailto:staj@turkuvazinovasyon.com"
-                                class="text-blue-600 underline">staj@turkuvazinovasyon.com</a></p>
+                        <p class=" font-semibold">Staj başvurularınız için</p>
+                        <p>E: <a href="mailto:staj@turkuvazinovasyon.com"
+                                class="font-semibold underline">staj@turkuvazinovasyon.com</a></p>
                     </div>
                     <div>
-                        <p class="text-gray-50 font-semibold">İş başvurularınız için</p>
-                        <p class="text-gray-50">E: <a href="mailto:ik@turkuvazinovasyon.com"
-                                class="text-blue-600 underline">ik@turkuvazinovasyon.com</a></p>
+                        <p class=" font-semibold">İş başvurularınız için</p>
+                        <p>E: <a href="mailto:ik@turkuvazinovasyon.com"
+                                class="font-semibold underline">ik@turkuvazinovasyon.com</a></p>
                     </div>
                     <div>
-                        <p class="text-gray-50 font-semibold">Bilgi için</p>
-                        <p class="text-gray-50">E: <a href="mailto:info@turkuvazinovasyon.com"
-                                class="text-blue-600 underline">info@turkuvazinovasyon.com</a></p>
-                        <p class="text-gray-50">S: Pazartesi - Cuma: 8:00 to 18:00</p>
+                        <p class=" font-semibold">Bilgi için</p>
+                        <p>E: <a href="mailto:info@turkuvazinovasyon.com"
+                                class="font-semibold underline">info@turkuvazinovasyon.com</a></p>
+                        <p>S: Pazartesi - Cuma: 8:00 to 18:00</p>
                     </div>
                 </div>
             </div>
             <!-- Contact Form -->
-            <div class="w-full lg:w-2/3 gap-6 p-6 bg-base-300 rounded-lg shadow-lg ">
+            <div class="w-full lg:w-2/3 gap-6 p-6 bg-base-200 rounded-lg shadow-lg ">
                 <h1 class="text-3xl font-bold mb-4 mx-10">Bize Ulaşın</h1>
                 <p class="mx-10">Aşağıdaki formu kullanarak bize ulaşabilirsiniz</p>
                 <form class="mx-8">
