@@ -201,6 +201,7 @@ export default {
 
 .slider:before,
 .slider:after {
+
     position: absolute;
     top: 0;
     width: 250px;
@@ -209,14 +210,18 @@ export default {
     z-index: 1;
 }
 
-.slider:before {
-    left: 0;
-    background: linear-gradient(to left, transparent, oklch(var(--b1)));
+@media (min-width: 1024px) {
+    .slider:before {
+        left: 0;
+        background: linear-gradient(to left, transparent, oklch(var(--b1)));
+    }
 }
 
-.slider:after {
-    right: 0;
-    background: linear-gradient(to right, transparent, oklch(var(--b1)));
+@media (min-width: 1024px) {
+    .slider:after {
+        right: 0;
+        background: linear-gradient(to right, transparent, oklch(var(--b1)));
+    }
 }
 
 .slider:hover .slide-track {
