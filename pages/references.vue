@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div data-theme="nord">
         <title> Referanslar </title>
         <div class="xl:h-16 h-20">
             <Navbar />

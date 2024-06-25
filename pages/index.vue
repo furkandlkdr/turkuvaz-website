@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-base-100" data-theme="dark">
+    <div class="bg-base-100" data-theme="nord">
         <title>Turkuvaz İnovasyon </title>
         <div class="h-12">
             <Navbar />
@@ -9,7 +9,7 @@
             <div class=" my-10 gap-8">
                 <!-- Heading -->
                 <div class="panel text-center mx-auto">
-                    <div class="flex-col items-center gap-2 text-white">
+                    <div class="flex-col items-center gap-2">
                         <h1 class="xl:text-7xl md:text-3xl">
                             Endüstriyel Alanda<br class="d-none sm:d-block">
                             Yenilikçi ve Profesyonel Çözümler

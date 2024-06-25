@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-theme="nord">
     <title> {{ service.systemName + " " + service.title }} </title>
     <!-- Navbar -->
     <div class="h-12">
