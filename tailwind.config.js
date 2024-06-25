@@ -19,6 +19,7 @@ module.exports = {
       "business",
       "nord",
       "night",
+      "winter",
     ]
   }
 }
