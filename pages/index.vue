@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-base-100" data-theme="nord">
+    <div class="bg-base-100" data-theme="winter">
         <title>Turkuvaz İnovasyon </title>
         <div class="h-12">
             <Navbar />

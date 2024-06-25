@@ -1,5 +1,5 @@
 <template>
-    <div data-theme="nord">
+    <div data-theme="winter">
         <title> Referanslar </title>
         <div class="xl:h-16 h-20">
             <Navbar />
@@ -11,7 +11,7 @@
             <!-- <div v-for="company in references" :key="company.url" class="card card-side bg-neutral-content shadow-lg">
                 <div class="2xl:h-52 h-24 flex items-center justify-center mb-2"></div>
             </div> -->
-            <div v-for="company in references" :key="company.url" class="card lg:card-side bg-neutral-content shadow-lg items-center p-4 xl:my-0 my-2">
+            <div v-for="company in references" :key="company.url" class="card lg:card-side bg-base-200 shadow-lg items-center p-4 xl:my-0 my-2">
                 <div class="2xl:w-80 lg:w-64 lg:h-44 h-32 flex items-center justify-center mb-2">
                     <figure class="w-full h-full flex items-center justify-center mx-4 mt-2">
                         <NuxtImg :src="`images/${company.url}`" :alt="`${company.name} logo`"
@@ -37,14 +37,13 @@ import { references } from '~/data/references.js';
 export default {
     name: 'References',
     setup() {
-        return {
-            references,
-        };
-    },
-    methods: {
-        parseDescriptions(company) {
+        const parseDescriptions = (company) => {
             return company.description.split('*');
         }
+        return {
+            references,
+            parseDescriptions
+        };
     }
 }
 </script>
