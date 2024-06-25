@@ -1,6 +1,6 @@
 <template>
-    <title>Turkuvaz İnovasyon </title>
     <div class="bg-base-100" data-theme="dark">
+        <title>Turkuvaz İnovasyon </title>
         <div class="h-12">
             <Navbar />
         </div>
@@ -136,8 +136,8 @@
                 </div>
             </div>
         </div>
-        <AboutUs />
-        <Contact />
+        <AboutUs id="AboutUs" />
+        <Contact id="Contact" />
         <Footer />
     </div>
 </template>

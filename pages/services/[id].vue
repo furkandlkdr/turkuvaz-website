@@ -1,6 +1,6 @@
 <template>
-  <title> {{ service.systemName + " " + service.title }} </title>
   <div>
+    <title> {{ service.systemName + " " + service.title }} </title>
     <!-- Navbar -->
     <div class="h-12">
       <Navbar />

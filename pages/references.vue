@@ -1,6 +1,6 @@
 <template>
-    <title> Referanslar </title>
     <div>
+        <title> Referanslar </title>
         <div class="xl:h-16 h-20">
             <Navbar />
         </div>
