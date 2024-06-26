@@ -54,7 +54,7 @@
                                 hedefe ulaşırken
                                 büyük kolaylık sağlamaktadır.</p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-neutral">Detay</button>
+                                <button class="btn btn-primary btn-outline">Detay</button>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 sistemleri ile
                                 birlikte) gerçek zamanlı üretim yönetimini mümkün kılmaktadır.</p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-neutral">Detay</button>
+                                <button class="btn btn-primary btn-outline">Detay</button>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                                 kapsayan 2Bee AS/RS
                                 çözümleri sunuyoruz.</p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-neutral">Detay</button>
+                                <button class="btn btn-primary btn-outline">Detay</button>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                                 sisteminizin en
                                 yüksek performansı vermesini garanti eder.</p>
                             <div class="card-actions justify-end">
-                                <button class="btn btn-neutral">Detay</button>
+                                <button class="btn btn-primary btn-outline">Detay</button>
                             </div>
                         </div>
                     </div>
@@ -202,7 +202,7 @@ export default {
 @media (min-width: 1024px) {
     .slider:before,
     .slider:after {
-        width: 250px;
+        width: 250px !important;
     }
 }
 
@@ -229,12 +229,12 @@ export default {
 
 
 .slider:hover .slide-track {
-    animation-play-state: paused;
+    animation-play-state: paused !important;
 }
 
 @media (min-width: 1024px) {
     .slide-track {
-        animation: 150s slide infinite linear;
+        animation: 150s slide infinite linear !important;
     }
 }
 
