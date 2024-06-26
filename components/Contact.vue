@@ -31,7 +31,7 @@
                     <button type="submit" class="btn btn-success max-lg:w-full text-gray-50 ">Gönder</button>
                 </form>
             </div>
-            <!-- Info text -->
+            <!-- Contact Info text -->
             <div class="flex max-lg:flex-col justify-center items-center gap-6 lg:mt-16 mt-8">
                 <div class="lg:w-1/2 flex flex-col items-center justify-center">
                     <h1 class="card-title text-3xl text-center">Turkuvaz İnovasyon</h1>
