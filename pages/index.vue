@@ -124,14 +124,14 @@
             <div class="slider h-220 w-3/4 mx-auto relative grid place-items-center overflow-x-hidden">
                 <div class="slide-track">
                     <!-- LOGOS -->
-                    <div v-for="image in references" :key="image.name"
+                    <div v-for="company in references" :key="company.name"
                         class="slide flex items-center justify-center w-56 h-full">
-                        <NuxtImg :src="`images/${image.url}`" />
+                        <NuxtImg :src="`images/${company.url}`" :title="company.description" />
                     </div>
 
-                    <div v-for="image in references" :key="image.name"
+                    <div v-for="company in references" :key="company.name"
                         class="slide flex items-center justify-center w-56 h-full">
-                        <NuxtImg :src="`/images/${image.url}`" />
+                        <NuxtImg :src="`/images/${company.url}`" :title="company.description" />
                     </div>
                 </div>
             </div>
@@ -199,40 +199,50 @@ export default {
     }
 }
 
+@media (min-width: 1024px) {
+    .slider:before,
+    .slider:after {
+        width: 250px;
+    }
+}
+
 .slider:before,
 .slider:after {
-
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 20px;
     height: 100%;
     content: "";
     z-index: 1;
 }
 
-@media (min-width: 1024px) {
-    .slider:before {
-        left: 0;
-        background: linear-gradient(to left, transparent, oklch(var(--b1)));
-    }
+.slider:before {
+    left: 0;
+    background: linear-gradient(to left, transparent, oklch(var(--b1)));
 }
 
-@media (min-width: 1024px) {
-    .slider:after {
-        right: 0;
-        background: linear-gradient(to right, transparent, oklch(var(--b1)));
-    }
+
+.slider:after {
+    right: 0;
+    background: linear-gradient(to right, transparent, oklch(var(--b1)));
 }
+
 
 .slider:hover .slide-track {
     animation-play-state: paused;
+}
+
+@media (min-width: 1024px) {
+    .slide-track {
+        animation: 150s slide infinite linear;
+    }
 }
 
 .slide-track {
     display: flex;
     background-color: rgb(255, 255, 255);
     height: 80%;
-    animation: 150s slide infinite linear;
+    animation: 75s slide infinite linear;
 }
 
 .slide>img {
