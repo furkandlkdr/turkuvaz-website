@@ -26,6 +26,7 @@
                 </ul>
             </div>
             <!-- Mobile menu -->
+             <!-- TODO: Add hamburger menu to proper drawer -->
             <div class="w-24" v-else>
                 <label class="btn btn-circle swap swap-rotate">
                     <input type="checkbox">
