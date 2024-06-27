@@ -24,24 +24,27 @@
             </div>
         </div>
         <!-- Cardbox -->
-        <div class="w-11/12 lg:w-9/12 mt-8 lg:mt-16 mx-auto justify-center items-center">
-            <div id="card-box" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div v-for="card in cards" :key="card.title" class="card bg-base-200 shadow-md">
-                    <figure class="w-11/12 2xl:ml-4 mt-4 self-center">
-                        <NuxtImg :src="card.image" class="h-24" :alt="card.title" />
+        <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 lg:mt-16 mx-auto ">
+            <div id="card-box" class="grid gap-8">
+                <div v-for="card in cards" :key="card.title"
+                    class="flex max-md:flex-col relative rounded-sm bg-base-200 shadow-md p-8">
+                    <figure class="md:w-96 max-md:h-24 self-center">
+                        <NuxtImg :src="card.image" class="max-h-full" :alt="card.title" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title text-5xl">{{ card.title }}</h2>
                         <p class="text-xl drop-shadow-lg">{{ card.description }}</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary btn-outline">Detay</button>
+                            <!-- <button class="btn btn-primary btn-outline">Detay</button> -->
+                            <NuxtLink class="btn btn-primary btn-outline" :to="'/services/' + card.id">Detay</NuxtLink>
+                            <!-- TODO: Change the data from cards to services-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Company Slider -->
-        <div class="slider w-11/12 lg:w-9/12 mx-auto relative grid place-items-center overflow-x-hidden">
+        <div class="slider w-11/12 lg:w-9/12 relative grid place-items-center overflow-x-hidden mx-auto my-8 lg:my-16">
             <div class="slide-track">
                 <div v-for="company in references" :key="company.name"
                     class="slide flex items-center justify-center w-56 h-full">
@@ -63,6 +66,7 @@ export default {
     setup() {
         const cards = [
             {
+                id: 1,
                 title: '2Win - SCADA Sistemleri',
                 image: `turkuvaz_logos/2Win_opt.svg`,
                 description: `SCADA işletmeler için, işletme içinde veya dışında herhangi bir yerde kullanılan bütün cihazların izlenmesi ve kontrol edilebilmesini sağlayan 
@@ -70,12 +74,14 @@ export default {
                 ulaşırken büyük kolaylık sağlamaktadır.`
             },
             {
+                id: 2,
                 title: '2Mes- Veri Toplama Sistemi',
                 image: 'turkuvaz_logos/2Mes_opt.svg',
                 description: `Günümüz rekabet koşullarında kaliteden ödün vermeden maliyetlerin düşürülmesi işletmeler için hayati önem taşımaktadır. 
                 2Das Veri Toplama Yazılımı ve Sistemlerimiz(İhtiyaç duyulan otomasyon sistemleri ile birlikte) gerçek zamanlı üretim yönetimini mümkün kılmaktadır.`
             },
             {
+                id: 3,
                 title: '2Bee - ASRS',
                 image: 'turkuvaz_logos/2Bee_opt.svg',
                 description: `İşletmelerde ürün hacmi ve çeşitliliğinin artması ile kullanılabilir depolama alanlarının daralması doğru ve hızlı erişim ihtiyacı robotik 
@@ -83,6 +89,7 @@ export default {
                 kapsayan 2Bee AS/RS çözümleri sunuyoruz.`
             },
             {
+                id: 4,
                 title: 'Elektrik Pano İmalatı',
                 image: 'turkuvaz_logos/atolye.svg',
                 description: `SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan elektrik panoları, sisteminizin sorunsuz ve güvenli bir şekilde çalışmasını sağlar. 
