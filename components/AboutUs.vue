@@ -5,7 +5,7 @@
         lg:gap-4 2xl:gap-8 
         w-full xl:w-1/2 items-center">
             <!-- Card 1 - 2 -->
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 max-lg:gap-8">
                 <!-- Card 1 -->
                 <div class="card bg-base-200 shadow-md p-6">
                     <h2 class="text-2xl font-bold mb-4">Otomasyon Hakkında Her Şey</h2>
