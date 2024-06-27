@@ -2,11 +2,11 @@
     <div>
         <div class="flex flex-col w-11/12 lg:w-9/12 mx-auto">
             <!-- Contact Form -->
-            <div class="w-full gap-6 p-6 bg-base-200 rounded-lg shadow-lg ">
-                <h1 class="text-3xl font-bold mb-4 mx-4 lg:mx-8">Bize Ulaşın</h1>
-                <p class="mx-4 lg:mx-8">Aşağıdaki formu kullanarak bize ulaşabilirsiniz</p>
+            <div class="w-full gap-4 p-4 bg-base-200 rounded-lg shadow-lg">
+                <h1 class="text-3xl font-bold mx-4 my-4 lg:mx-8">Bize Ulaşın</h1>
+                <p class="mx-4 lg:mx-8 my-4">Aşağıdaki formu kullanarak bize ulaşabilirsiniz</p>
                 <form @submit="sendMessage" class="mx-4 lg:mx-8">
-                    <div class="flex max-lg:flex-wrap gap-8">
+                    <div class="flex max-lg:flex-wrap gap-4">
                         <div class="lg:w-1/3 w-full">
                             <label for="name" class="label">İsim:</label>
                             <input type="text" id="name" v-model="name" required
@@ -23,17 +23,20 @@
                                 class="input input-bordered input-info input-lg w-full">
                         </div>
                     </div>
-                    <div class="w-full flex flex-col">
+                    <div class="w-full flex flex-col my-4">
                         <label for="message" class="label">Mesaj:</label>
                         <textarea id="message" v-model="message" required
-                            class="textarea textarea-info input-lg w-full min-h-60 mb-4"></textarea>
+                            class="textarea textarea-info input-lg w-full min-h-60"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success max-lg:w-full text-gray-50 ">Gönder</button>
+                    <div class="grid grid-cols-12 my-4">
+                        <button type="submit"
+                            class="btn btn-lg btn-success lg:col-start-9 lg:col-span-4 col-span-12 w-full text-gray-50 ">Gönder</button>
+                    </div>
                 </form>
             </div>
             <!-- Contact Info text -->
-            <div class="flex max-lg:flex-col justify-center items-center gap-6 lg:mt-16 mt-8">
-                <div class="lg:w-1/2 flex flex-col items-center justify-center">
+            <div class="flex max-md:flex-col justify-center items-center gap-6 lg:mt-16 mt-8">
+                <div class="md:w-1/2 flex flex-col items-center justify-center">
                     <h1 class="card-title text-3xl text-center">Turkuvaz İnovasyon</h1>
                     <h2 class="text-xl mb-2">Sistem Çözümleri A.Ş.</h2>
                     <p class="text-center">Erciyes Üniversitesi Teknoloji Geliştirme Bölgesi</p>
@@ -43,7 +46,7 @@
                     <p>Tel : +90 352 311 55 67</p>
                     <p>Faks : +90 352 311 55 87</p>
                 </div>
-                <div class="lg:w-1/2 flex flex-col items-center justify-center gap-4">
+                <div class="md:w-1/2 flex flex-col items-center justify-center gap-4">
                     <div class="flex flex-col items-center">
                         <p class="font-semibold">Staj başvurularınız için</p>
                         <a href="mailto:staj@turkuvazinovasyon.com"
