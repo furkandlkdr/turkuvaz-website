@@ -6,14 +6,15 @@
         </div>
         <div class="mt-8 gap-8">
             <!-- Heading -->
-            <h1 class="text-center w-11/12 lg:w-9/12 mx-auto lg:text-7xl text-4xl max-lg:font-bold">
+            <h1 class="text-center w-11/12 lg:w-9/12 mx-auto lg:text-7xl text-4xl max-lg:font-bold fade-in-element">
                 Endüstriyel Alanda <br> Yenilikçi ve Profesyonel Çözümler
             </h1>
             <!-- Carousel -->
-            <div class="mx-auto w-11/12 lg:w-9/12">
+            <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
                 <div class="carousel relative mt-8 lg:mt-16 min-h-52">
                     <div v-for="(image, index) in carousel_images" :key="index"
-                        class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700" :class="carouselOpacity">
+                        class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700"
+                        :class="carouselOpacity">
                         <NuxtImg :src="`slides/${image}`" class="w-full" />
                     </div>
                     <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
@@ -24,14 +25,14 @@
             </div>
         </div>
         <!-- Cardbox -->
-        <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 mx-auto ">
+        <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 mx-auto">
             <div id="card-box" class="flex flex-col gap-8">
                 <div v-for="card in services" :key="card.id"
-                    class="flex max-md:flex-col relative rounded-sm bg-base-200 shadow-md p-8">
-                    <figure class="max-md:h-24 self-center md:w-1/6">
+                    class="flex max-lg:flex-col relative rounded-sm bg-base-200 shadow-md p-8 fade-in-element">
+                    <figure class="max-lg:h-24 max-md:h-16 self-center lg:w-1/6">
                         <NuxtImg :src="card.logo" class="max-h-full" :alt="card.title" />
                     </figure>
-                    <div class="card-body md:w-5/6">
+                    <div class="card-body max-lg:items-center lg:w-5/6">
                         <h2 class="card-title text-5xl">{{ card.systemName + " " + card.title }}</h2>
                         <p class="text-xl drop-shadow-lg">{{ card.descriptions[0].text }}</p>
                         <div class="card-actions justify-end">
@@ -42,7 +43,8 @@
             </div>
         </div>
         <!-- Company Slider -->
-        <div class="slider w-11/12 lg:w-9/12 relative grid place-items-center overflow-x-hidden mx-auto my-8 lg:my-16">
+        <div
+            class="slider w-11/12 lg:w-9/12 relative grid place-items-center overflow-x-hidden mx-auto my-8 lg:my-16 fade-in-element">
             <div class="slide-track">
                 <div v-for="company in references" :key="company.name"
                     class="slide flex items-center justify-center w-56 h-full">
@@ -50,8 +52,8 @@
                 </div>
             </div>
         </div>
-        <AboutUs class="my-8 lg:my-16" id="AboutUs" />
-        <Contact class="my-8 lg:my-16" id="Contact" />
+        <AboutUs class="my-8 lg:my-16 fade-in-element" id="AboutUs" />
+        <Contact class="my-8 lg:my-16 fade-in-element" id="Contact" />
         <Footer />
     </div>
 </template>
@@ -63,6 +65,20 @@ import { services } from '~/data/services';
 export default {
     name: 'MainPage',
     setup() {
+        onMounted(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            document.querySelectorAll('.fade-in-element').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+
         const carouselOpacity = ref("opacity-100");
         const carousel_images = ref([
             'slide1.jpg',
@@ -94,7 +110,7 @@ export default {
             prevSlide,
             nextSlide,
         }
-    }
+    },
 }
 </script>
 
@@ -168,5 +184,16 @@ export default {
 .slide>img:hover {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
