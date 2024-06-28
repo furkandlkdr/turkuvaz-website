@@ -4,16 +4,16 @@
         <div class="h-20">
             <Navbar />
         </div>
-        <div class="mt-8 lg:mt-16 gap-8">
+        <div class="mt-8 gap-8">
             <!-- Heading -->
             <h1 class="text-center w-11/12 lg:w-9/12 mx-auto lg:text-7xl text-4xl max-lg:font-bold">
                 Endüstriyel Alanda <br> Yenilikçi ve Profesyonel Çözümler
             </h1>
             <!-- Carousel -->
             <div class="mx-auto w-11/12 lg:w-9/12">
-                <div class="carousel relative mt-8 lg:mt-16">
+                <div class="carousel relative mt-8 lg:mt-16 min-h-52">
                     <div v-for="(image, index) in carousel_images" :key="index"
-                        class="carousel-item relative w-full transition-opacity duration-700" :class="carouselOpacity">
+                        class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700" :class="carouselOpacity">
                         <NuxtImg :src="`slides/${image}`" class="w-full" />
                     </div>
                     <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
@@ -24,18 +24,17 @@
             </div>
         </div>
         <!-- Cardbox -->
-        <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 lg:mt-16 mx-auto ">
-            <div id="card-box" class="grid gap-8">
+        <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 mx-auto ">
+            <div id="card-box" class="flex flex-col gap-8">
                 <div v-for="card in services" :key="card.id"
                     class="flex max-md:flex-col relative rounded-sm bg-base-200 shadow-md p-8">
-                    <figure class="md:w-96 max-md:h-24 self-center">
+                    <figure class="max-md:h-24 self-center md:w-1/6">
                         <NuxtImg :src="card.logo" class="max-h-full" :alt="card.title" />
                     </figure>
-                    <div class="card-body">
+                    <div class="card-body md:w-5/6">
                         <h2 class="card-title text-5xl">{{ card.systemName + " " + card.title }}</h2>
                         <p class="text-xl drop-shadow-lg">{{ card.descriptions[0].text }}</p>
                         <div class="card-actions justify-end">
-                            <!-- <button class="btn btn-primary btn-outline">Detay</button> -->
                             <NuxtLink class="btn btn-primary btn-outline" :to="'/services/' + card.id">Detay</NuxtLink>
                         </div>
                     </div>
@@ -86,7 +85,6 @@ export default {
                 carouselOpacity.value = "opacity-100";
             }, 400)
         }
-
 
         return {
             references,
