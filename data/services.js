@@ -29,6 +29,7 @@ yerli yazılımlarla karşılamayı amaçlamıştır. Firmamız bünyesinde geli
 kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne çıkmaktadır.`,
       },
     ],
+    logo: `turkuvaz_logos/2Win_opt.svg`,
     images: [
       "/services/2Win1.jpg",
       "/services/2Win2.jpg",
@@ -38,7 +39,7 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
   },
   {
     id: 2,
-    systemName: "2Das",
+    systemName: "2Mes",
     title: "Veri Toplama Sistemleri",
     descriptions: [
       {
@@ -55,14 +56,15 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
       },
       {
         isList: false,
-        text: `Geliştirilen 2Das Veri Toplama Yazılımı, Üretim Modülü, Duruş Modülü, Arıza Bildirim ve Arıza Bakım Modülü olmak üzere 4 kısımdan oluşmaktadır.`,
+        text: `Geliştirilen 2Mes Veri Toplama Yazılımı, Üretim Modülü, Duruş Modülü, Arıza Bildirim ve Arıza Bakım Modülü olmak üzere 4 kısımdan oluşmaktadır.`,
       },
     ],
+    logo: `turkuvaz_logos/2Mes_opt.svg`,
     images: [
-      "/services/2Das1.jpg",
-      "/services/2Das2.jpg",
-      "/services/2Das3.jpg",
-      "/services/2Das4.jpg",
+      "/services/2Mes1.jpg",
+      "/services/2Mes2.jpg",
+      "/services/2Mes3.jpg",
+      "/services/2Mes4.jpg",
     ],
   },
   {
@@ -102,11 +104,32 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
           *Otomotiv parçaları`,
       },
     ],
+    logo: `turkuvaz_logos/2Bee_opt.svg`,
     images: [
       "/services/2Bee1.jpg",
       "/services/2Bee2.jpg",
       "/services/2Bee3.jpg",
       "/services/2Bee4.jpg",
+    ],
+  },
+  {
+    id: 4,
+    systemName: "Atölye",
+    title: "Elektrik Pano İmalatı",
+    descriptions: [
+      {
+        isList: false,
+        text: `SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan elektrik panoları, sisteminizin sorunsuz ve güvenli bir şekilde çalışmasını sağlar. 
+          Uzman ekibimiz, ihtiyaçlarınız doğrultusunda özel olarak tasarlanmış ve üretilmiş elektrik panoları sunarak, otomasyon sisteminizin en yüksek performansı vermesini 
+          garanti eder.`,
+      },
+    ],
+    logo: `turkuvaz_logos/atolye.svg`,
+    images: [
+      "/services/Atolye1.jpg",
+      "/services/Atolye2.jpg",
+      "/services/Atolye3.jpg",
+      "/services/Atolye4.jpg",
     ],
   },
 ];
