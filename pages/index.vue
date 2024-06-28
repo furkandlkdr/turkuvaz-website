@@ -26,18 +26,17 @@
         <!-- Cardbox -->
         <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 lg:mt-16 mx-auto ">
             <div id="card-box" class="grid gap-8">
-                <div v-for="card in cards" :key="card.title"
+                <div v-for="card in services" :key="card.id"
                     class="flex max-md:flex-col relative rounded-sm bg-base-200 shadow-md p-8">
                     <figure class="md:w-96 max-md:h-24 self-center">
-                        <NuxtImg :src="card.image" class="max-h-full" :alt="card.title" />
+                        <NuxtImg :src="card.logo" class="max-h-full" :alt="card.title" />
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title text-5xl">{{ card.title }}</h2>
-                        <p class="text-xl drop-shadow-lg">{{ card.description }}</p>
+                        <h2 class="card-title text-5xl">{{ card.systemName + " " + card.title }}</h2>
+                        <p class="text-xl drop-shadow-lg">{{ card.descriptions[0].text }}</p>
                         <div class="card-actions justify-end">
                             <!-- <button class="btn btn-primary btn-outline">Detay</button> -->
                             <NuxtLink class="btn btn-primary btn-outline" :to="'/services/' + card.id">Detay</NuxtLink>
-                            <!-- TODO: Change the data from cards to services-->
                         </div>
                     </div>
                 </div>
@@ -61,42 +60,10 @@
 <script>
 import { ref } from 'vue';
 import { references } from '~/data/references.js';
+import { services } from '~/data/services';
 export default {
     name: 'MainPage',
     setup() {
-        const cards = [
-            {
-                id: 1,
-                title: '2Win - SCADA Sistemleri',
-                image: `turkuvaz_logos/2Win_opt.svg`,
-                description: `SCADA işletmeler için, işletme içinde veya dışında herhangi bir yerde kullanılan bütün cihazların izlenmesi ve kontrol edilebilmesini sağlayan 
-                vazgeçilemez bir sistemdir. 2Win Scada Yazılımı ile maksimum erişilebilirlik ve hızlı müdahale hedeflenmiştir. Web tabanlı geliştirilen yazılımımız bu hedefe 
-                ulaşırken büyük kolaylık sağlamaktadır.`
-            },
-            {
-                id: 2,
-                title: '2Mes- Veri Toplama Sistemi',
-                image: 'turkuvaz_logos/2Mes_opt.svg',
-                description: `Günümüz rekabet koşullarında kaliteden ödün vermeden maliyetlerin düşürülmesi işletmeler için hayati önem taşımaktadır. 
-                2Das Veri Toplama Yazılımı ve Sistemlerimiz(İhtiyaç duyulan otomasyon sistemleri ile birlikte) gerçek zamanlı üretim yönetimini mümkün kılmaktadır.`
-            },
-            {
-                id: 3,
-                title: '2Bee - ASRS',
-                image: 'turkuvaz_logos/2Bee_opt.svg',
-                description: `İşletmelerde ürün hacmi ve çeşitliliğinin artması ile kullanılabilir depolama alanlarının daralması doğru ve hızlı erişim ihtiyacı robotik 
-                yükleme/boşaltma sistemlerinin kullanılmasını gerekli hale getirmiştir. Bu kapsamda mekanik iş ortağımız GMM ile depolama robotu, plc ve bilgisayar yazılımını 
-                kapsayan 2Bee AS/RS çözümleri sunuyoruz.`
-            },
-            {
-                id: 4,
-                title: 'Elektrik Pano İmalatı',
-                image: 'turkuvaz_logos/atolye.svg',
-                description: `SCADA otomasyon sistemlerinizin en önemli bileşenlerinden biri olan elektrik panoları, sisteminizin sorunsuz ve güvenli bir şekilde çalışmasını sağlar. 
-                Uzman ekibimiz, ihtiyaçlarınız doğrultusunda özel olarak tasarlanmış ve üretilmiş elektrik panoları sunarak, otomasyon sisteminizin en yüksek performansı vermesini 
-                garanti eder.`
-            }
-        ];
         const carouselOpacity = ref("opacity-100");
         const carousel_images = ref([
             'slide1.jpg',
@@ -123,7 +90,7 @@ export default {
 
         return {
             references,
-            cards,
+            services,
             carouselOpacity,
             carousel_images,
             prevSlide,
