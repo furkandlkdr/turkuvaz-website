@@ -12,10 +12,9 @@
             <!-- Carousel -->
             <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
                 <div class="carousel relative mt-8 lg:mt-16 min-h-52">
-                    <div v-for="(image, index) in carousel_images" :key="index"
-                        class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700"
+                    <div class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700"
                         :class="carouselOpacity">
-                        <NuxtImg :src="`slides/${image}`" class="w-full" />
+                        <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
                     </div>
                     <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
                         <button @click="prevSlide" class="btn btn-circle">❮</button>
@@ -79,6 +78,7 @@ export default {
             });
         });
 
+        let counter = 0;
         const carouselOpacity = ref("opacity-100");
         const carousel_images = ref([
             'slide1.jpg',
@@ -86,27 +86,30 @@ export default {
             'slide3.jpg',
             'slide4.jpg'
         ]);
+        const showenCarousel = ref(carousel_images.value[counter])
 
         const prevSlide = () => {
             carouselOpacity.value = "opacity-0";
             setTimeout(() => {
-                carousel_images.value.unshift(carousel_images.value.pop())
+                counter = counter === 0 ? carousel_images.value.length - 1 : counter - 1;
+                showenCarousel.value = carousel_images.value[counter];
                 carouselOpacity.value = "opacity-100";
-            }, 400)
+            }, 600)
         }
         const nextSlide = () => {
             carouselOpacity.value = "opacity-0";
             setTimeout(() => {
-                carousel_images.value.push(carousel_images.value.shift())
+                counter = counter === carousel_images.value.length - 1 ? 0 : counter + 1;
+                showenCarousel.value = carousel_images.value[counter];
                 carouselOpacity.value = "opacity-100";
-            }, 400)
+            }, 600)
         }
 
         return {
             references,
             services,
             carouselOpacity,
-            carousel_images,
+            showenCarousel,
             prevSlide,
             nextSlide,
         }
