@@ -11,7 +11,7 @@
             </h1>
             <!-- Carousel -->
             <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
-                <div class="carousel relative mt-8 lg:mt-16 min-h-52">
+                <div class="carousel w-full relative mt-8 lg:mt-16 min-h-52">
                     <div class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700"
                         :class="carouselOpacity">
                         <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
