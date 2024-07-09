@@ -16,7 +16,6 @@
           <li v-for="service in services" :key="service.id">
             <NuxtLink class="link link-hover" :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
           </li>
-          <!-- <li><a>Elektrik Pano İmalatı</a></li> -->
         </ul>
       </div>
       <!-- Menu 2 -->
@@ -26,8 +25,8 @@
           <li>
             <NuxtLink to="/" class="link link-hover">Anasayfa</NuxtLink>
           </li>
-          <li><a @click="scrollToAboutUs" class="link link-hover">Hakkımızda</a></li>
-          <li><a @click="scrollToContact" class="link link-hover">İletişim</a></li>
+          <li><a @click="scrollToElement('AboutUs')" class="link link-hover">Hakkımızda</a></li>
+          <li><a @click="scrollToElement('Contact')" class="link link-hover">İletişim</a></li>
           <li>
             <NuxtLink class="link link-hover" to="/references">Müşterilerimiz</NuxtLink>
           </li>
@@ -110,20 +109,27 @@ export default {
   setup() {
     const route = useRoute();
     const router = useRouter();
-    const scrollToAboutUs = () => {
+
+    const scrollToElement = (elementId) => {
+      const scrollDecraser = 100;
       if (route.path === '/') {
-        document.getElementById('AboutUs').scrollIntoView({ behavior: 'smooth' });
-      } else router.push('/').then(() =>
-        setTimeout(() => document.getElementById('AboutUs').scrollIntoView({ behavior: 'smooth' }), 200
-        ));
-    };
-    const scrollToContact = () => {
-      if (route.path === '/') {
-        document.getElementById('Contact').scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-      } else router.push('/').then(() =>
-        setTimeout(() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' }), 200
-        ));
-    };
+        const el = document.getElementById(elementId);
+        if (el) {
+          const scrollPosition = el.offsetTop - scrollDecraser;
+          window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+      } else {
+        router.push('/').then(() => {
+          setTimeout(() => {
+            const el = document.getElementById(elementId);
+            if (el) {
+              const scrollPosition = el.offsetTop - scrollDecraser;
+              window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+            }
+          }, 200);
+        });
+      }
+    }
     const routeToSite = (routeIndex) => {
       switch (routeIndex) {
         case 1:
@@ -143,8 +149,7 @@ export default {
       }
     }
     return {
-      scrollToAboutUs,
-      scrollToContact,
+      scrollToElement,
       DateTime: new Date().getFullYear(),
       services,
       routeToSite,
