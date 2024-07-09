@@ -3,155 +3,178 @@ export const references = [
     name: "Altınay",
     url: "altinay.png",
     description: "AS/RS Sistemi *2Win Scada",
+    website: "https://www.altinay.com",
   },
   {
     name: "Anka Elektrik Elektronik Otomasyon",
     url: "anka.png",
     description: "2Win Scada *Kablo makinaları yazılımı",
+    website: "https://ankaelektrik.com/",
   },
   {
     name: "Arçelik",
     url: "arcelik.png",
     description: "2Bee AS/RS Sistemi *2Win Scada",
+    website: "https://www.arcelikglobal.com",
   },
   {
     name: "Bellona",
     url: "bellona.png",
     description: "2Mes Veri Toplama Yazılımı",
+    website: "https://www.bellona.com.tr",
   },
   {
     name: "Boyteks",
     url: "boyteks.png",
-    description:
-      "2Bee AS/RS *2Win Scada *Germe makinası otomasyon revizyonu",
+    description: "2Bee AS/RS *2Win Scada *Germe makinası otomasyon revizyonu",
+    website: "https://www.boyteks.com",
   },
   {
     name: "Çalık Denim",
     url: "calik_denim.png",
     description: "2Bee AS/RS Sistemi *2Win Scada",
+    website: "https://www.calikdenim.com/",
   },
   {
     name: "Doğtaş",
     url: "dogtas.png",
     description: "2Mes Veri Toplama Yazılımı",
+    website: "https://www.dogtas.com",
   },
   {
     name: "Form Sünger",
     url: "form_sunger.png",
     description: "2Mes Veri Toplama Yazılımı",
+    website: "https://www.formsunger.com.tr/",
   },
-  { name: "Gelal", url: "gelal.png", description: "AS/RS Yazlımı" },
+  { name: "Gelal", url: "gelal.png", description: "AS/RS Yazlım", website: "https://www.gelalcorap.com/" },
   {
     name: "Güven Mühendislik Makina",
     url: "guven_muhendislik_makina.png",
-    description:
-      "AS/RS Yazlımı *2Win Scada",
+    description: "AS/RS Yazlımı *2Win Scada",
+    website: "https://gmm.com.tr/",
   },
   {
     name: "İstikbal",
     url: "istikbal.png",
-    description:
-      "2Win Scada *2Mes Veri Toplama Yazılımı",
+    description: "2Win Scada *2Mes Veri Toplama Yazılımı",
+    website: "https://www.istikbal.com.tr",
   },
   {
     name: "Kayseri Su Kanalizasyon İdaresi",
     url: "kaski.png",
     description: "2Win Scada *Uzak Kuyu Yönetimi Sistemi",
+    website: "https://www.kaski.gov.tr",
   },
   {
     name: "Kayseri Organize Sanayi Bölgesi",
     url: "kayseri_osb.png",
     description: "Endüstriyel Otomasyon *Briket Üretim Hattı *Paketleme",
+    website: "https://www.kayseriosb.org",
   },
   {
     name: "Kayseri Ulaşım",
     url: "kayseri_ulasim.png",
     description: "Kayseri Paylaşımlı Bisiklet (Kaybis) Yazılımı",
+    website: "https://www.kayseriulasim.com",
   },
   {
     name: "Kelebek",
     url: "kelebek.png",
     description: "2Mes Veri Toplama Yazılımı",
+    website: "https://www.kelebek.com",
   },
   {
     name: "Lineer Makina",
     url: "lineer_makina.png",
     description: "Endüstriyel Otomasyon *Sıvı Dolum Makinası Plc Programı",
+    website: "https://www.lineermakina.com/tr",
   },
   {
     name: "Melikgazi Belediyesi",
     url: "melikgazi_belediyesi.png",
     description: "T2Kuyu *Uzak Kuyu Yönetim Yazılımı",
+    website: "https://www.melikgazi.bel.tr/",
   },
   {
     name: "Mesa",
     url: "mesa.png",
     description: "Gömülü Sistemler *RF Kumanda Kartları.",
+    website: "https://www.mesaenerji.com.tr/",
   },
   {
     name: "Mondi",
     url: "mondi.png",
     description: "2Mes Veri Toplama Yazılımı",
+    website: "https://www.mondihome.com.tr/",
   },
   {
     name: "NKS Kablo",
     url: "nks_kablo.png",
-    description:
-      "2Win Scada *Foam Skin Makinası otomasyon revizyonu",
+    description: "2Win Scada *Foam Skin Makinası otomasyon revizyonu",
+    website: "https://nkskablo.com.tr/",
   },
   {
     name: "Nurol Teknoloji",
     url: "nurol_teknoloji.png",
     description: "Vakumlu Fırın Otomasyonu *2Win Scada",
+    website: "https://www.nurolteknoloji.com",
   },
   {
     name: "Orta Anadolu",
     url: "orta_anadolu.png",
     description:
       "2Win Scada *Enerji Otomasyon ve Scada Yazılımı *Su Hazırlama Birimi Otomasyon ve Scada Yazılımı *Sanfor Makinası Otomasyon Revizyonu",
+    website: "https://ortaanadolu.com/",
   },
   {
     name: "Ravago",
     url: "ravago.png",
     description:
       "2Win Scada *Taş Yünü Hattı Otomasyonu ve Scada Yazılımı *Reçine Reaktörü Scada Yazılımı *Pres Paketleme Otomasyonu",
+    website: "https://ravagobuildingsolutions.com/tr",
   },
   {
     name: "Simfer",
     url: "simfer.png",
-    description:
-      "2Win Scada *Montaj Bantları Otomasyon ve Scada Yazılımı",
+    description: "2Win Scada *Montaj Bantları Otomasyon ve Scada Yazılımı",
+    website: "https://www.simfer.com.tr",
   },
   {
     name: "Şirikçioğlu Mensucat",
     url: "sirikcioglu.png",
-    description:
-      "2Win Scada *Indigo Otomasyon ve Scada Revizyonu",
+    description: "2Win Scada *Indigo Otomasyon ve Scada Revizyonu",
+    website: "https://www.sirikcioglu.com.tr",
   },
   {
     name: "SMG Makina",
     url: "smg_makina.png",
     description: "Endüstriyel Otomasyon *Gazlı Amortisör Montaj Hattı",
+    website: "https://smgmakina.com/",
   },
   {
     name: "Turkish Aerospace Industries",
     url: "tai.png",
     description:
       "Veri Toplama *Özel Scada Yazılımı *Veri Toplama Yazılımı ile Plc yazılımı *Ultrasonik kompozit malzeme tarama projesi bilgisayar yazılımı",
+    website: "https://www.tusas.com/",
   },
   {
     name: "Talas Belediyesi",
     url: "talas_belediyesi.png",
     description: "İş Takip Yazılımı",
+    website: "https://www.talas.bel.tr",
   },
   {
     name: "Türk Hava Yolları Teknik A.Ş.",
     url: "turkish_technic.png",
     description: "2Bee AS/RS Sistemi",
+    website: "https://www.thyteknik.com",
   },
   {
     name: "Vibroblok",
     url: "vibroblok.png",
     description: "Scada Otomasyon *2Win Scada",
+    website: "https://www.vibroblok.com/",
   },
 ];
