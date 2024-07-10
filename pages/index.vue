@@ -1,13 +1,14 @@
 <template>
     <div class="bg-base-100" data-theme="winter">
-        <title>Turkuvaz İnovasyon </title>
+        <title>Turkuvaz İnovasyon</title>
+        <BackgroundFirst />
         <div class="h-20">
             <Navbar />
         </div>
         <div class="mt-8 gap-8">
             <!-- Heading -->
             <h1 class="text-center w-11/12 lg:w-9/12 mx-auto lg:text-7xl text-4xl max-lg:font-bold fade-in-element">
-                Endüstriyel Alanda <br> Yenilikçi ve Profesyonel Çözümler
+                Endüstriyel Alanda <br /> Yenilikçi ve Profesyonel Çözümler
             </h1>
             <!-- Carousel -->
             <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
@@ -17,8 +18,8 @@
                         <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
                     </div>
                     <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
-                        <button @click="prevSlide" class="btn btn-circle">❮</button>
-                        <button @click="nextSlide" class="btn btn-circle">❯</button>
+                        <button @click="changeSlide(0)" class="btn btn-circle">❮</button>
+                        <button @click="changeSlide(1)" class="btn btn-circle">❯</button>
                     </div>
                 </div>
             </div>
@@ -47,7 +48,8 @@
             <div class="slide-track">
                 <div v-for="company in references" :key="company.name"
                     class="slide flex items-center justify-center w-56 h-full">
-                    <NuxtImg :src="`images/${company.url}`" :title="company.description" />
+                    <NuxtImg :src="`images/${company.url}`" @click="openCompanySite(company.website)"
+                        :title="company.description" />
                 </div>
             </div>
         </div>
@@ -58,15 +60,41 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { references } from '~/data/references.js';
 import { services } from '~/data/services';
+
 export default {
     name: 'MainPage',
     setup() {
+        const counter = ref(0);
+        const carouselOpacity = ref("opacity-100");
+        const carouselImages = ref([
+            'slide1.jpg',
+            'slide2.jpg',
+            'slide3.jpg',
+            'slide4.jpg'
+        ]);
+        const showenCarousel = ref(carouselImages.value[counter.value]);
+
+        const changeSlide = (isGoingForward) => {
+            const index = isGoingForward ? (counter.value + 1) % carouselImages.value.length :
+                (counter.value - 1 + carouselImages.value.length) % carouselImages.value.length;
+            carouselOpacity.value = "opacity-0";
+            setTimeout(() => {
+                counter.value = index;
+                showenCarousel.value = carouselImages.value[counter.value];
+                carouselOpacity.value = "opacity-100";
+            }, 600);
+        }
+
+        const openCompanySite = (website) => {
+            window.open(website, '_blank');
+        };
+
         onMounted(() => {
             const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
+                entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('fade-in-active');
                         observer.unobserve(entry.target);
@@ -78,43 +106,16 @@ export default {
             });
         });
 
-        let counter = 0;
-        const carouselOpacity = ref("opacity-100");
-        const carousel_images = ref([
-            'slide1.jpg',
-            'slide2.jpg',
-            'slide3.jpg',
-            'slide4.jpg'
-        ]);
-        const showenCarousel = ref(carousel_images.value[counter])
-
-        const prevSlide = () => {
-            carouselOpacity.value = "opacity-0";
-            setTimeout(() => {
-                counter = counter === 0 ? carousel_images.value.length - 1 : counter - 1;
-                showenCarousel.value = carousel_images.value[counter];
-                carouselOpacity.value = "opacity-100";
-            }, 600)
-        }
-        const nextSlide = () => {
-            carouselOpacity.value = "opacity-0";
-            setTimeout(() => {
-                counter = counter === carousel_images.value.length - 1 ? 0 : counter + 1;
-                showenCarousel.value = carousel_images.value[counter];
-                carouselOpacity.value = "opacity-100";
-            }, 600)
-        }
-
         return {
             references,
             services,
             carouselOpacity,
             showenCarousel,
-            prevSlide,
-            nextSlide,
-        }
+            changeSlide,
+            openCompanySite,
+        };
     },
-}
+};
 </script>
 
 <style scoped>

@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col h-screen" data-theme="winter">
+  <div class="flex flex-col" data-theme="winter">
     <title> {{ service.systemName + " " + service.title }} </title>
     <!-- Navbar -->
     <div class="min-h-20">
       <Navbar />
     </div>
     <!-- Page content -->
-    <div class="flex flex-col lg:flex-row grow w-11/12 lg:w-9/12 my-4 mx-auto">
+    <div class="flex max-lg:flex-col grow w-11/12 lg:w-9/12 my-4 mx-auto">
       <div class="w-1/3">
         <h1 class="text-3xl font-bold">{{ service.systemName + " " + service.title }}</h1>
         <!-- TODO: Add a carusel or image gallery -->
@@ -17,11 +17,11 @@
         </div>
       </div>
       <div class="w-2/3 pl-4">
-        <div v-for="desc in service.descriptions">
-          <ol class="text-xl my-8" v-if="desc.isList">
+        <div v-for="desc in service.descriptions" class="text-xl">
+          <ol class="my-8" v-if="desc.isList">
             <li class="my-1" v-for="item in parseList(desc.text)">{{ item }}</li>
           </ol>
-          <p class="text-xl my-8" v-else>{{ desc.text }}</p>
+          <p class="my-8" v-else>{{ desc.text }}</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
 
     if (!service) {
       router.push('/'); // Redirect to home page if service not found
-    }
+    } // TODO: Add a 404 page
 
     const parseList = (list) => {
       list = list.split('*').map(item => item.trim()).filter(item => item !== '');
