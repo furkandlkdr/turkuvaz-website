@@ -10,7 +10,8 @@
                     <li>
                         <details class="dropdown">
                             <summary>Hizmetler</summary>
-                            <ul class="p-2 text-xl shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none">
+                            <ul class="p-2 text-xl shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none rounded-box 
+                            border border-white/5 shadow-2xl outline outline-1 outline-black/5">
                                 <li v-for="service in services" :key="service.id">
                                     <NuxtLink :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
                                 </li>
@@ -57,7 +58,6 @@
                                             <li v-for="service in services" :key="service.id">
                                                 <NuxtLink :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
                                             </li>
-                                            <!-- <li><a>Elektrik Pano İmalatı</a></li> -->
                                         </ul>
                                     </details>
                                 </li>
@@ -74,20 +74,45 @@
             <NuxtLink to="/" v-if="isMobile" class="btn btn-ghost text-xl">
                 <img src="assets/onlylogo.svg" alt="logo">
             </NuxtLink>
+
             <!-- Language Change -->
-            <ul class="text-xl menu menu-horizontal">
-                <li>
-                    <details>
-                        <summary>
-                            Dil
-                        </summary>
-                        <ul class="p-2 bg-base-100 z-[1]">
-                            <li><button>Türkçe</button></li>
-                            <li><button>English</button></li>
-                        </ul>
-                    </details>
-                </li>
-            </ul>
+            <div title="Change Language" class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost" aria-label="Language">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6">
+                        <path fill-rule="evenodd"
+                            d="M11 5a.75.75 0 0 1 .688.452l3.25 7.5a.75.75 0 1 1-1.376.596L12.89 12H9.109l-.67 1.548a.75.75 0 1 1-1.377-.596l3.25-7.5A.75.75 0 0 1 11 5Zm-1.24 5.5h2.48L11 7.636 9.76 10.5ZM5 1a.75.75 0 0 1 .75.75v1.261a25.27 25.27 0 0 1 2.598.211.75.75 0 1 1-.2 1.487c-.22-.03-.44-.056-.662-.08A12.939 12.939 0 0 1 5.92 8.058c.237.304.488.595.752.873a.75.75 0 0 1-1.086 1.035A13.075 13.075 0 0 1 5 9.307a13.068 13.068 0 0 1-2.841 2.546.75.75 0 0 1-.827-1.252A11.566 11.566 0 0 0 4.08 8.057a12.991 12.991 0 0 1-.554-.938.75.75 0 1 1 1.323-.707c.049.09.099.181.15.271.388-.68.708-1.405.952-2.164a23.941 23.941 0 0 0-4.1.19.75.75 0 0 1-.2-1.487c.853-.114 1.72-.185 2.598-.211V1.75A.75.75 0 0 1 5 1Z"
+                            clip-rule="evenodd">
+                        </path>
+                    </svg>
+                    <svg width="12px" height="12px" class="hidden h-2 w-2 fill-current opacity-60 sm:inline-block"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+                        <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z">
+                        </path>
+                    </svg>
+                </div>
+
+                <div tabindex="0" class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 w-56 
+                    overflow-y-auto border border-white/5 shadow-2xl outline outline-1 outline-black/5">
+                    <ul class="menu menu-sm gap-1">
+                        <li>
+                            <button class="p-2">
+                                <span
+                                    class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px !text-[.6rem] font-bold tracking-widest opacity-50">
+                                    EN </span>
+                                <span class="font-[sans-serif]">English</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="active p-2">
+                                <span
+                                    class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px !text-[.6rem] font-bold tracking-widest opacity-50">
+                                    TR </span>
+                                <span class="font-[sans-serif]">Türkçe</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -95,12 +120,14 @@
 <script>
 import { useMediaQuery } from '@vueuse/core';
 import { services } from '~/data/services.js';
+
 export default {
     name: 'Navbar',
     setup() {
         const isMobile = useMediaQuery('(max-width: 1024px)');
         const route = useRoute();
         const router = useRouter();
+
         const scrollToElement = (elementId) => {
             closeDrawer();
             const scrollDecraser = 100;
@@ -121,11 +148,12 @@ export default {
                     }, 200);
                 });
             }
-        }
+        };
 
         const closeDrawer = () => {
             const drawerToggle = document.getElementById("my-drawer");
-            drawerToggle.checked = false;
+            if (drawerToggle)
+                drawerToggle.checked = false;
         };
 
         onMounted(() => {
@@ -138,8 +166,8 @@ export default {
             scrollToElement,
             closeDrawer,
         };
-    }
-}
+    },
+};
 </script>
 
 <style scoped>
