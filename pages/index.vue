@@ -1,29 +1,9 @@
 <template>
-    <div class="bg-base-100" data-theme="winter">
-        <title>Turkuvaz İnovasyon</title>
-        <BackgroundFirst />
-        <div class="h-20">
+    <div class="bg-base-100 flex flex-col" data-theme="winter">
+        <div class="flex-start h-16 mb-2">
             <Navbar />
         </div>
-        <div class="mt-8 gap-8">
-            <!-- Heading -->
-            <h1 class="text-center w-11/12 lg:w-9/12 mx-auto lg:text-7xl text-4xl max-lg:font-bold fade-in-element">
-                Endüstriyel Alanda <br /> Yenilikçi ve Profesyonel Çözümler
-            </h1>
-            <!-- Carousel -->
-            <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
-                <div class="carousel w-full relative mt-8 lg:mt-16 min-h-52">
-                    <div class="carousel-item relative w-full max-md:w-auto transition-opacity duration-700"
-                        :class="carouselOpacity">
-                        <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
-                    </div>
-                    <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
-                        <button @click="changeSlide(0)" class="btn btn-circle">❮</button>
-                        <button @click="changeSlide(1)" class="btn btn-circle">❯</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Hero />
         <!-- Cardbox -->
         <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mt-8 mx-auto">
             <div id="card-box" class="flex flex-col gap-8">
@@ -60,34 +40,12 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
 import { references } from '~/data/references.js';
 import { services } from '~/data/services';
 
 export default {
     name: 'MainPage',
     setup() {
-        const counter = ref(0);
-        const carouselOpacity = ref("opacity-100");
-        const carouselImages = ref([
-            'slide1.jpg',
-            'slide2.jpg',
-            'slide3.jpg',
-            'slide4.jpg'
-        ]);
-        const showenCarousel = ref(carouselImages.value[counter.value]);
-
-        const changeSlide = (isGoingForward) => {
-            const index = isGoingForward ? (counter.value + 1) % carouselImages.value.length :
-                (counter.value - 1 + carouselImages.value.length) % carouselImages.value.length;
-            carouselOpacity.value = "opacity-0";
-            setTimeout(() => {
-                counter.value = index;
-                showenCarousel.value = carouselImages.value[counter.value];
-                carouselOpacity.value = "opacity-100";
-            }, 600);
-        }
-
         const openCompanySite = (website) => {
             window.open(website, '_blank');
         };
@@ -106,17 +64,50 @@ export default {
             });
         });
 
+        useSeoMeta({
+            title: 'Turkuvaz İnovasyon',
+            description: `Endüstriyel alanda yenilikçi ve profesyonel çözümler sunan Turkuvaz İnovasyon, müşterilerine en iyi hizmeti
+            sunmayı hedefler.Genellikle Veri toplama, AS/ RS, Scada, PLC sistemleri ve otomasyon alanlarında hizmet
+            verir.`,
+            twitterTitle: 'Turkuvaz İnovasyon Twitter',
+            twitterDescription: 'Endüstriyel alanda yenilikçi ve profesyonel çözümler sunan Turkuvaz İnovasyon, müşterilerine en iyi hizmeti sunmayı hedefler.',
+            twitterImage: 'assets/onlylogo.svg',
+        })
+
+        useHead({
+            htmlAttrs: {
+                lang: 'tr'
+            },
+            link: [
+                {
+                    rel: 'icon',
+                    type: 'image/ico',
+                    href: 'public/favicon.ico'
+                }
+            ]
+        })
+
         return {
             references,
             services,
-            carouselOpacity,
-            showenCarousel,
-            changeSlide,
             openCompanySite,
         };
     },
 };
 </script>
+
+<style>
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 
 <style scoped>
 * {
@@ -188,16 +179,5 @@ export default {
 .slide>img:hover {
     transform: scale(1.2);
     cursor: pointer;
-}
-
-.fade-in-element {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in-active {
-    opacity: 1;
-    transform: translateY(0);
 }
 </style>

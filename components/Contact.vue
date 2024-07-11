@@ -50,17 +50,17 @@
                     <div class="flex flex-col items-center">
                         <p class="font-semibold">Staj başvurularınız için</p>
                         <a href="mailto:staj@turkuvazinovasyon.com"
-                            class="font-semibold underline">staj@turkuvazinovasyon.com</a>
+                            class="font-semibold link link-hover">staj@turkuvazinovasyon.com</a>
                     </div>
                     <div class="flex flex-col items-center">
                         <p class="font-semibold">İş başvurularınız için</p>
                         <a href="mailto:ik@turkuvazinovasyon.com"
-                            class="font-semibold underline">ik@turkuvazinovasyon.com</a>
+                            class="font-semibold link link-hover">ik@turkuvazinovasyon.com</a>
                     </div>
                     <div class="flex flex-col items-center">
                         <p class="font-semibold">Bilgi için</p>
                         <a href="mailto:info@turkuvazinovasyon.com"
-                            class="font-semibold underline">info@turkuvazinovasyon.com</a>
+                            class="font-semibold link link-hover">info@turkuvazinovasyon.com</a>
                         <p class="text-center">S: Pazartesi - Cuma: 8:00'den 18:00'e</p>
                     </div>
                 </div>

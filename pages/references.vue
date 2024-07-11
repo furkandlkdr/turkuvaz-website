@@ -73,17 +73,6 @@ export default {
     color: oklch(var(--n));
 }
 
-.fade-in-element {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in-active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .company-hover:hover {
     scale: 1.01;
     transition: scale 0.1s;
