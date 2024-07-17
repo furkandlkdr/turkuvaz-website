@@ -9,9 +9,9 @@
         </div>
         <div class="grid xl:grid-cols-2 w-11/12 2xl:w-9/12 mx-auto gap-2 xl:gap-6">
             <div v-for="company in references" :key="company.url" @click="openCompanySite(company.website)"
-                class="card lg:card-side bg-base-200 shadow-lg items-center p-4 xl:my-0 my-2 fade-in-element company-hover">
-                <div class="2xl:w-80 lg:w-64 lg:h-44 h-32 flex items-center justify-center mb-2">
-                    <figure class="w-full h-full flex items-center justify-center mx-4 mt-2">
+                class="card lg:card-side bg-base-300 shadow-lg items-center p-4 xl:my-0 my-2 fade-in-element company">
+                <div class="2xl:w-80 lg:w-64 lg:h-44 h-32 self-center mb-2">
+                    <figure class="w-full h-full mx-4 mt-2">
                         <NuxtImg :src="`images/${company.url}`" :alt="`${company.name} logo`"
                             class="w-full h-full object-contain" />
                     </figure>
@@ -73,15 +73,12 @@ export default {
     color: oklch(var(--n));
 }
 
-.company-hover:hover {
+.company:hover {
     scale: 1.01;
     transition: scale 0.1s;
-    background-color: oklch(var(--b3));
+    background-color: oklch(var(--b1));
+    outline: 6px solid rgb(8, 145, 178);
     cursor: pointer;
-}
-
-.company-hover {
-    border-radius: 7%;
 }
 </style>
 style
