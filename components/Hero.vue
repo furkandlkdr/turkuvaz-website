@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="bg-slate-200 top-0 start-0 end-0 min-h-screen overflow-hidden text-cyan-600" @mousemove="handleMouseMove">
+        <div class="bg-slate-200 top-0 start-0 end-0 min-h-screen overflow-hidden text-cyan-600" @mousemove.passive="handleMouseMove">
             <!-- Floating Icons -->
-            <div class="floating-container absolute top-0 start-0 end-0 h-full block fade-in-element" v-if="!isMobile">
+            <div class="floating-container absolute top-0 start-0 end-0 h-full block fade-in-element" v-show="!isMobile">
                 <div class="icon h-16" v-for="(icon, index) in icons" :style="`position: absolute; ${screenLocations[index]}`" :key="icon.name">
                     <NuxtImg :src="icon.location" class="h-16" />
                 </div>
@@ -35,7 +35,7 @@ import { useMediaQuery } from '@vueuse/core';
 export default {
     name: 'Hero',
     setup() {
-        const isMobile = useMediaQuery('(max-width: 1024px)');
+        const isMobile = ref(false);
         const icons = ref([
             { name: 'analytics', location: 'bg1_icons/analytics.png' },
             { name: 'automation', location: 'bg1_icons/automation.png' },
@@ -91,6 +91,10 @@ export default {
                 carouselOpacity.value = 'opacity-100';
             }, 600);
         };
+
+        onMounted(() => {
+            isMobile.value = useMediaQuery('(max-width: 1024px)').value;
+        });
 
         return {
             isMobile,
