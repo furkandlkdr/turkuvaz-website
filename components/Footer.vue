@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-base-200 text-base-content p-8 grid">
+  <footer class="bg-base-200 text-base-content p-8 grid border-t-4 border-cyan-600">
     <div class="grid md:grid-cols-4 gap-10 lg:gap-1 lg:w-9/12 mx-auto">
       <!-- Company Info -->
       <div class="lg:mr-10 max-lg:text-center">
