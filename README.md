@@ -1,75 +1,81 @@
-# Nuxt 3 Minimal Starter
+# Turkuvaz İnovasyon Website (Not finished)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Description
 
-## Setup
+This project is a website for Turkuvaz İnovasyon, a software and SCADA Automation company. The website is built using Nuxt3, Tailwind CSS, DaisyUI, and NuxtImage. The goal is to create a responsive design with SEO features to enhance the online presence of the company.
 
-Make sure to install the dependencies:
+## Features
 
-```bash
-# npm
-npm install
+- **Responsive Design**: The website is fully responsive, ensuring optimal viewing and interaction experience across a wide range of devices.
+- **SEO Optimization**: Implemented SEO best practices to improve the visibility of the website in search engine results.
+- **Modern UI Components**: Utilizes Tailwind CSS and DaisyUI to create a modern and attractive user interface.
+- **Efficient Image Handling**: Uses NuxtImage for optimized image loading and management.
 
-# pnpm
-pnpm install
+## Technologies Used
 
-# yarn
-yarn install
+- **Nuxt3**: A powerful framework for building server-side rendered Vue.js applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **DaisyUI**: A plugin for Tailwind CSS that provides pre-designed components.
+- **NuxtImage**: A Nuxt module for optimized image handling.
 
-# bun
-bun install
-```
+## Getting Started
 
-## Development Server
+### Prerequisites
 
-Start the development server on `http://localhost:3000`:
+- Node.js (Download from [here](https://nodejs.org/))
+- npm or yarn
 
-```bash
-# npm
-npm run dev
+### Installation
 
-# pnpm
-pnpm run dev
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/furkandlkdr/turkuvaz-website.git
+   ```
+2. **Navigate to the project directory**:
+   ```bash
+   cd turkuvaz-inovasyon-website
+   ```
 
-# yarn
-yarn dev
+4. **Install dependencies**:
+   ```
+   npm install
+   ```
+   or
+   ```
+   yarn install
+   ```
 
-# bun
-bun run dev
-```
+6. **Run the development server**:
+   ```npm run dev```
+   or
+   ```yarn dev```
 
-## Production
+8. **Open your browser**:
+   Navigate to `http://localhost:3000` to see the website in development mode.
 
-Build the application for production:
+## Building for Production
 
-```bash
-# npm
-npm run build
+To build the project for production, use the following command:
 
-# pnpm
-pnpm run build
+`npm run build`
+or
+`yarn build`
 
-# yarn
-yarn build
+and
 
-# bun
-bun run build
-```
+`npm run start`
+or
+`yarn start`
 
-Locally preview production build:
+## Contributing
 
-```bash
-# npm
-npm run preview
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-# pnpm
-pnpm run preview
+## License
 
-# yarn
-yarn preview
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-# bun
-bun run preview
-```
+## Acknowledgements
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Thanks to the developers of Nuxt3, Tailwind CSS, DaisyUI, and NuxtImage for their invaluable resources and tools.
+- Special thanks to the Turkuvaz İnovasyon team for their collaboration and support.
