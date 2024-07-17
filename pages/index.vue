@@ -7,7 +7,7 @@
         <CardBox :services="services" class="pt-8 lg:pt-16" />
         <!-- Company Slider -->
         <div
-            class="slider w-11/12 lg:w-9/12 relative grid place-items-center overflow-x-hidden mx-auto my-8 lg:my-16 fade-in-element">
+            class="slider w-11/12 lg:w-9/12 relative grid place-items-center overflow-x-hidden mx-auto mt-8 lg:mt-16 fade-in-element">
             <div class="slide-track">
                 <div v-for="company in references" :key="company.name"
                     class="slide flex items-center justify-center w-56 h-full">
@@ -16,8 +16,8 @@
                 </div>
             </div>
         </div>
-        <AboutUs class="my-8 lg:my-16 fade-in-element" id="AboutUs" />
-        <Contact class="my-8 lg:my-16 fade-in-element" id="Contact" />
+        <AboutUs class="mt-8 lg:mt-16 fade-in-element" id="AboutUs" />
+        <Contact class="mt-8 lg:mt-16 pb-8 lg:pb-16 fade-in-element" id="Contact" />
         <Footer />
     </div>
 </template>
