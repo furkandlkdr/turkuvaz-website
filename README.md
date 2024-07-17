@@ -46,9 +46,13 @@ This project is a website for Turkuvaz İnovasyon, a software and SCADA Automati
    ```
 
 6. **Run the development server**:
-   ```npm run dev```
+   ```
+   npm run dev
+   ```
    or
-   ```yarn dev```
+   ```
+   yarn dev
+   ```
 
 8. **Open your browser**:
    Navigate to `http://localhost:3000` to see the website in development mode.
