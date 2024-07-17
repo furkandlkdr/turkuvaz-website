@@ -1,5 +1,5 @@
 <template>
-    <div class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 fade-in">
+    <div class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 fade-in border-b-4 border-cyan-600">
         <div class="navbar justify-between max-lg:w-11/12 mx-auto">
             <div class="gap-x-8" v-if="!isMobile">
                 <NuxtLink to="/" class="btn btn-ghost text-xl">
