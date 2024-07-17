@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="aboutus-container">
         <div class="flex flex-col w-11/12 lg:w-9/12 mx-auto">
             <!-- Contact Form -->
             <div class="w-full gap-4 p-4 bg-base-200 rounded-lg shadow-lg">
-                <h1 class="text-3xl font-bold mx-4 my-4 lg:mx-8">Bize Ulaşın</h1>
+                <h1 class="text-3xl font-bold mx-4 lg:mx-8 mt-4">Bize Ulaşın</h1>
                 <p class="mx-4 lg:mx-8 my-4">Aşağıdaki formu kullanarak bize ulaşabilirsiniz</p>
                 <form @submit="sendMessage" class="mx-4 lg:mx-8">
                     <div class="flex max-lg:flex-wrap gap-4">
@@ -73,6 +73,8 @@
                 allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 class="w-11/12 lg:w-9/12 h-96 mx-auto"></iframe>
         </div>
+
+        <div id="background" class="bg-base-300 absolute top-0 left-0 right-0 bottom-0 bg-cover bg-fixed -z-10"></div>
     </div>
 </template>
 
@@ -87,7 +89,6 @@ export default {
         const message = ref('');
 
         const sendMessage = (e) => {
-            e.preventDefault();
             const data = {
                 name: name.value,
                 email: email.value,
@@ -109,4 +110,28 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px) {
+    #background {
+        clip-path: polygon(100% 100%,
+                0 100%,
+                0 18%,
+                25% 10%,
+                50% 10%,
+                75% 15%,
+                100% 0) !important;
+    }
+}
+
+#background {
+    clip-path: polygon(100% 0,
+            80% 10%,
+            60% 18%,
+            40% 10%,
+            20% 18%,
+            0 25%,
+            0 100%,
+            100% 100%);
+    transition: clip-path 0.5s ease-in-out;
+}
+</style>
