@@ -1,6 +1,6 @@
 <template>
     <div class="cardbox-container">
-        <div id="background" class="bg-primary absolute top-0 left-0 right-0 bottom-20 bg-cover bg-fixed"></div>
+        <div id="background" class="bg-base-300 absolute top-0 left-0 right-0 bottom-0 bg-cover bg-fixed"></div>
         <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mx-auto pb-8 relative z-10">
             <div id="card-box" class="flex flex-col gap-8">
                 <div v-for="card in services" :key="card.id"
@@ -35,7 +35,19 @@ export default {
 <style scoped>
 .cardbox-container {
     position: relative;
-    min-height: 110vh;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+    #background {
+        clip-path: polygon(0 0,
+                100% 0,
+                100% 82%,
+                75% 90%,
+                50% 90%,
+                25% 85%,
+                0 100%) !important;
+    }
 }
 
 #background {
@@ -47,9 +59,6 @@ export default {
             40% 82%,
             20% 90%,
             0 100%);
-    background-color: oklch(var(--b3));
-    background-size: cover;
-    background-attachment: fixed;
     transition: clip-path 0.5s ease-in-out;
 }
 </style>
