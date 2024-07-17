@@ -1,5 +1,6 @@
 <template>
-    <div class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 fade-in border-b-4 border-cyan-600">
+    <div
+        class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 fade-in border-b-4 border-cyan-600">
         <div class="navbar justify-between max-lg:w-11/12 mx-auto">
             <div class="gap-x-8" v-if="!isMobile">
                 <NuxtLink to="/" class="btn btn-ghost text-xl">
@@ -9,20 +10,20 @@
                     <!-- Services -->
                     <li>
                         <details class="dropdown">
-                            <summary>Hizmetler</summary>
-                            <ul class="p-2 text-xl shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none rounded-box 
-                            border border-white/5 shadow-2xl outline outline-1 outline-black/5">
+                            <summary class="my-link">Hizmetler</summary>
+                            <ul class="p-2 text-xl shadow z-[1] w-72 bg-base-300 rounded-t-none rounded-box border border-white/5 
+                            shadow-2xl outline outline-1 outline-black/5">
                                 <li v-for="service in services" :key="service.id">
-                                    <NuxtLink :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
+                                    <NuxtLink :to="'/services/' + service.id" class="my-link">{{ service.title }}</NuxtLink>
                                 </li>
                             </ul>
                         </details>
                     </li>
                     <li>
-                        <NuxtLink to="/references">Müşterilerimiz</NuxtLink>
+                        <NuxtLink to="/references" class="my-link">Müşterilerimiz</NuxtLink>
                     </li>
-                    <li><a @click="scrollToElement('AboutUs')">Hakkımızda</a></li>
-                    <li><a @click="scrollToElement('Contact')">İletişim</a></li>
+                    <li><a @click="scrollToElement('AboutUs')" class="my-link">Hakkımızda</a></li>
+                    <li><a @click="scrollToElement('Contact')" class="my-link">İletişim</a></li>
                 </ul>
             </div>
 
@@ -54,7 +55,7 @@
                                     <details class="dropdown dropdown-right">
                                         <summary>Hizmetler</summary>
                                         <ul
-                                            class="p-2 text-xl shadow menu dropdown-content z-[1] w-52 bg-base-200 rounded-t-none">
+                                            class="p-2 text-xl shadow menu dropdown-content z-[1] w-72 bg-base-200 rounded-t-none">
                                             <li v-for="service in services" :key="service.id">
                                                 <NuxtLink :to="'/services/' + service.id">{{ service.title }}</NuxtLink>
                                             </li>
@@ -173,6 +174,11 @@ export default {
 <style scoped>
 .fade-in {
     animation: fadeIn 1s ease-in-out;
+}
+
+.my-link:hover{
+    background-color: oklch(var(--b3));
+    text-decoration: underline;
 }
 
 @keyframes fadeIn {
