@@ -13,8 +13,8 @@
                     Endüstriyel Alanda <br /> Yenilikçi ve Profesyonel Çözümler
                 </h1>
                 <!-- Carousel -->
-                <div class="mx-auto w-11/12 lg:w-9/12 fade-in-element">
-                    <div class="carousel w-full relative mt-8 lg:mt-16 min-h-52">
+                <div class="mx-auto mt-8 lg:mt-16 w-11/12 lg:w-9/12 fade-in-element">
+                    <div class="carousel w-full relative min-h-52 overflow-x-hidden">
                         <div class="carousel-item relative w-full max-lg:w-auto transition-opacity duration-700" :class="carouselOpacity">
                             <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
                         </div>
