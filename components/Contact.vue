@@ -5,7 +5,7 @@
             <div class="w-full gap-4 p-4 bg-base-200 rounded-lg shadow-lg">
                 <h1 class="text-3xl font-bold mx-4 lg:mx-8 mt-4">Bize Ulaşın</h1>
                 <p class="mx-4 lg:mx-8 my-4">Aşağıdaki formu kullanarak bize ulaşabilirsiniz</p>
-                <form @submit="sendMessage" class="mx-4 lg:mx-8">
+                <form @submit.prevent="sendMessage" class="mx-4 lg:mx-8">
                     <div class="flex max-lg:flex-wrap gap-4">
                         <div class="lg:w-1/3 w-full">
                             <label for="name" class="label">İsim:</label>
@@ -43,8 +43,7 @@
                     <p>5.Bina Kat: 1 No: 67-4/66</p>
                     <p>Melikgazi / KAYSERİ</p>
                     <p>TÜRKİYE</p>
-                    <p>Tel : +90 352 311 55 67</p>
-                    <p>Faks : +90 352 311 55 87</p>
+                    <a class="link link-hover" href="tel:+903523115567">Tel : +90 352 311 55 67</a>
                 </div>
                 <div class="md:w-1/2 flex flex-col items-center justify-center gap-4">
                     <div class="flex flex-col items-center">
@@ -97,6 +96,7 @@ export default {
             };
             console.log(data);
             // TODO: Send mail to info@turkuvazinovasyon.com
+            // TODO: Show success or error message
         };
 
         return {
