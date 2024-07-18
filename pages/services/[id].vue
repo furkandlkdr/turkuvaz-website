@@ -44,12 +44,38 @@ export default {
 
     if (!service) {
       router.push('/'); // Redirect to home page if service not found
-    } // TODO: Add a 404 page
+    } // TODO: Add a 404 page (optional)
 
     const parseList = (list) => {
       list = list.split('*').map(item => item.trim()).filter(item => item !== '');
       return list;
     }
+
+    onBeforeMount(() => {
+      document.title = "Turkuvaz - " + service.systemName + " " + service.title;
+    });
+
+    useSeoMeta({
+      title: service.systemName + " " + service.title,
+      description: service.descriptions[0].text,
+      ogTitle: service.systemName + " " + service.title,
+      ogDescription: service.descriptions[0].text,
+      ogUrl: "https://turkuvazinovasyon.com/services/" + service.id,
+      ogImage: service.images[0],
+    })
+
+    useHead({
+      htmlAttrs: {
+        lang: 'tr'
+      },
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/ico',
+          href: 'public/favicon.ico'
+        }
+      ]
+    })
 
     return {
       service,
