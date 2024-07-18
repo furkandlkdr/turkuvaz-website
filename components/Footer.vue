@@ -126,7 +126,7 @@ export default {
     const routeToSite = (routeIndex) => {
       switch (routeIndex) {
         case 1:
-          window.open('https://www.facebook.com/turkuvaz.inovasyon', '_blank');
+          window.open('https://www.facebook.com/share/dy6jPdN6TJ85jf5p/?mibextid=qi2Omg', '_blank');
           break;
         case 2:
           window.open('https://www.linkedin.com/company/turkuvazinovasyon/', '_blank');
@@ -141,6 +141,7 @@ export default {
           break;
       }
     }
+
     return {
       scrollToElement,
       DateTime: new Date().getFullYear(),
