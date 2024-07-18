@@ -37,7 +37,13 @@ export default {
             verir.`,
             twitterTitle: 'Turkuvaz İnovasyon Twitter',
             twitterDescription: 'Endüstriyel alanda yenilikçi ve profesyonel çözümler sunan Turkuvaz İnovasyon, müşterilerine en iyi hizmeti sunmayı hedefler.',
-            twitterImage: 'assets/onlylogo.svg',
+            twitterImage: 'assets\\onlylogo.svg',
+            ogTitle: 'Turkuvaz İnovasyon Otomasyon ve Sistem Çözümleri',
+            ogDescription: `Endüstriyel alanda yenilikçi ve profesyonel çözümler sunan Turkuvaz İnovasyon, müşterilerine en iyi hizmeti
+            sunmayı hedefler.Genellikle Veri toplama, AS/ RS, Scada, PLC sistemleri ve otomasyon alanlarında hizmet
+            verir.`,
+            ogImage: 'assets\\onlylogo.svg',
+            ogUrl: 'https://turkuvazinovasyon.com',
         })
 
         useHead({
@@ -47,8 +53,8 @@ export default {
             link: [
                 {
                     rel: 'icon',
-                    type: 'image/ico',
-                    href: 'public/favicon.ico'
+                    type: 'image/x-icon',
+                    href: '/favicon.ico'
                 }
             ]
         })
