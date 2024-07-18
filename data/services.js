@@ -58,6 +58,18 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
         isList: false,
         text: `Geliştirilen 2Mes Veri Toplama Yazılımı, Üretim Modülü, Duruş Modülü, Arıza Bildirim ve Arıza Bakım Modülü olmak üzere 4 kısımdan oluşmaktadır.`,
       },
+      {
+        isList: true,
+        text: `*Veri Toplama, Görüntüleme ve Yönetim Sisteminde hedeflerimiz
+          Üretim takibini anlık olarak yapmak,
+          Zamanın kullanımında ve üretimde verimliliği arttırmak,
+          Veri toplamada insan faktörünü en aza indirerek, hatalar ve gecikmelerin önüne geçmek,
+          İyileştirme çalışmaları için gerekli bilgileri gerçek değerleri ile birlikte almak,
+          Üretimden anlık veri akışı ile birlikte çizelgeleme ve planlamanın sağlıklı yapılmasını sağlamak,
+          Personel performansının gerçek değerler ile tespit etmek,
+          İstenilen verilere, kısa sürede ulaşılmasını sağlamak,
+          İşçilik giderlerinde maksimum iyileştirmeyi sağlamak,`,
+      },
     ],
     logo: `turkuvaz_logos/2Mes_opt.svg`,
     images: [
@@ -74,7 +86,7 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
     descriptions: [
       {
         isList: false,
-        text: `Otomatik depo sistemleri genellikle büyük hacimli ve ağır yüklerin depolanmasında, alanların yetersiz olması nedeniyle 
+        text: `Otomatik depo sistemleri (Automated Storage and Retrieval Systems) genellikle büyük hacimli ve ağır yüklerin depolanmasında, alanların yetersiz olması nedeniyle 
           depolama yoğunluğunun yüksek olduğu durumlarda tercih edilmektedir. Üretim firmalarında ve dağıtım merkezlerinde geniş bir uygulama alanı vardır. 
           Sistemler çoğunlukla tam otomatik olarak ve insansız çalışmaktadır. Bunun sonucunda da yüksek bir depo hassasiyeti yakalanır.`,
       },
