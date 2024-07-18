@@ -1,6 +1,6 @@
 <template>
     <div
-        class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 border-b-4 border-cyan-600">
+        class="font-sans font-bold bg-base-300 fixed top-0 left-0 right-0 z-20 lg:h-auto h-20 border-b-4 border-cyan-600 flex justify-between">
         <div class="navbar justify-between max-lg:w-11/12 mx-auto">
             <div class="gap-x-8" v-show="!isMobile">
                 <NuxtLink to="/" class="btn btn-ghost text-xl">
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Mobile menu -->
-            <div class="w-24 drawer z-[2]" v-show="isMobile">
+            <div class="drawer z-[2] w-auto" v-show="isMobile">
                 <!-- Hamburger button -->
                 <input id="my-drawer" type="checkbox" class="drawer-toggle" ref="drawerToggle" />
                 <div class="drawer-content">
@@ -202,6 +202,11 @@ export default {
 .my-link:hover {
     background-color: oklch(var(--b3));
     color: rgb(8, 145, 178);
+    transition: background-color 0.3s ease, color 0.5s ease;
+}
+
+.my-link {
+    transition: background-color 0.3s ease, color 0.5s ease;
 }
 
 .active {
