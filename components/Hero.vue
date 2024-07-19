@@ -1,21 +1,25 @@
 <template>
     <div>
-        <div class="bg-slate-200 top-0 start-0 end-0 min-h-screen overflow-hidden text-cyan-600" @mousemove.passive="handleMouseMove">
+        <div class="bg-slate-200 top-0 start-0 end-0 xl:min-h-screen min-h-[70vh] overflow-hidden text-cyan-600"
+            @mousemove.passive="handleMouseMove">
             <!-- Floating Icons -->
-            <div class="floating-container absolute top-0 start-0 end-0 h-full block fade-in-element" v-show="!isMobile">
-                <div class="icon h-16" v-for="(icon, index) in icons" :style="`position: absolute; ${screenLocations[index]}`" :key="icon.name">
+            <div class="floating-container absolute top-0 start-0 end-0 h-full block fade-in-element"
+                v-show="!isMobile">
+                <div class="icon h-16" v-for="(icon, index) in icons"
+                    :style="`position: absolute; ${screenLocations[index]}`" :key="icon.name">
                     <NuxtImg :src="icon.location" class="h-16" />
                 </div>
             </div>
             <div class="mt-8 gap-8">
                 <!-- Heading -->
-                <h1 class="text-center w-11/12 lg:w-9/12 mx-auto text-7xl lg:font-bold fade-in-element">
+                <h1 class="text-center w-11/12 lg:w-9/12 mx-auto md:text-7xl text-5xl fade-in-element">
                     Endüstriyel Alanda <br /> Yenilikçi ve Profesyonel Çözümler
                 </h1>
                 <!-- Carousel -->
                 <div class="mx-auto mt-8 lg:mt-16 w-11/12 lg:w-9/12 fade-in-element">
                     <div class="carousel w-full relative min-h-52 overflow-x-hidden">
-                        <div class="carousel-item relative w-full max-lg:w-auto transition-opacity duration-700" :class="carouselOpacity">
+                        <div class="carousel-item relative w-full max-xl:w-auto transition-opacity duration-700"
+                            :class="carouselOpacity">
                             <NuxtImg :src="`slides/${showenCarousel}`" class="w-full" />
                         </div>
                         <div class="absolute flex justify-between -translate-y-1/2 left-5 right-5 top-1/2">
@@ -56,6 +60,16 @@ export default {
             'top: 90%; right: 5%;',
             'top: 35%;',
         ]);
+        const smallScreenLocations = ref([
+            'top: 55%; right: 40%;',
+            'top: 15%; right: 12%;',
+            'top: 10%; left: 12%;',
+            'top: 25%; left: 3%',
+            'top: 65%; left: 4%;',
+            'top: 43%; right: 8%;',
+            'top: 65%; right: 5%;',
+            'top: 25%;',
+        ])
 
         const slideCounter = ref(0);
         const carouselOpacity = ref('opacity-100');
