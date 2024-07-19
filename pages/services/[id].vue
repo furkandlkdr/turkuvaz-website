@@ -16,7 +16,7 @@
       </div>
 
       <!-- Image Gallery -->
-      <div class="image-gallery rounded-lg w-full flex gap-6 justify-center overflow-hidden">
+      <div class="image-gallery rounded-lg w-full flex justify-center overflow-hidden">
         <button class="self-center transform bg-gray-800/50 hover:bg-gray-800/80 text-white p-4 rounded-full"
           @click="changeCurrentPhoto(-1)">
           &#10094;
@@ -36,10 +36,16 @@
       <!-- Descriptions -->
       <div class="text-xl m-6 flex flex-col gap-4">
         <div v-for="desc in service.descriptions">
-          <ul v-if="desc.isList">
-            <p v-for="item in parseList(desc.text)" class="my-1">{{ item }}</p>
-          </ul>
-          <div v-else>{{ desc.text }}</div>
+          <div v-if="desc.isList" class="card bg-base-200">
+            <ul class="card-body">
+              <p v-for="item in parseList(desc.text)" class="my-1 xl:text-2xl">{{ item }}</p>
+            </ul>
+          </div>
+          <div v-else class="card bg-base-200">
+            <div class="card-body xl:text-2xl">
+              {{ desc.text }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
