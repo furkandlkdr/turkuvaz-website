@@ -90,7 +90,7 @@ export default {
 .fade-in-element {
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
 }
 
 .fade-in-active {
