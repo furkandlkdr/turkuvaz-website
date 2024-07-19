@@ -4,7 +4,7 @@
         <div class="w-11/12 lg:w-9/12 max-lg:text-center justify-center items-center mx-auto pb-8 relative z-10">
             <div id="card-box" class="flex flex-col gap-8">
                 <div v-for="card in services" :key="card.id"
-                    class="flex max-lg:flex-col relative rounded-sm bg-base-200 shadow-md p-8 fade-in-element">
+                    class="flex max-lg:flex-col relative rounded-sm bg-base-200 shadow-md p-8 rounded fade-in-element">
                     <figure class="max-lg:h-24 max-md:h-16 self-center lg:w-1/6">
                         <NuxtImg :src="card.logo" class="max-h-full" :alt="card.title" />
                     </figure>
@@ -42,10 +42,10 @@ export default {
     #background {
         clip-path: polygon(0 0,
                 100% 0,
-                100% 82%,
-                75% 90%,
-                50% 90%,
-                25% 85%,
+                100% 90%,
+                75% 97%,
+                50% 97%,
+                25% 92%,
                 0 100%) !important;
     }
 }
