@@ -90,10 +90,10 @@ export default {
 
       const classMap = {
         '0': 'opacity-100 z-[1] scale-120',
-        '1': 'left-image opacity-40 scale-90',
-        '-1': 'right-image opacity-40 scale-90',
-        '2': 'lefter-image opacity-10 scale-90',
-        '-2': 'righter-image opacity-10 scale-90'
+        '1': 'left-image opacity-40 scale-60',
+        '-1': 'right-image opacity-40 scale-60',
+        '2': 'lefter-image opacity-10 scale-60',
+        '-2': 'righter-image opacity-10 scale-60'
       };
 
       for (const [offset, className] of Object.entries(classMap)) {
@@ -179,7 +179,7 @@ export default {
 } */
 
 .my-h-fixed {
-  height: 35svh;
+  height: 40svh;
 }
 
 .left-image {
