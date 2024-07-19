@@ -32,9 +32,10 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
     logo: `turkuvaz_logos/2Win_opt.svg`,
     images: [
       "/services/2Win1.jpg",
-      "/services/2Win2.jpg",
-      "/services/2Win3.jpg",
-      "/services/2Win4.jpg",
+      "/services/2Win2.png",
+      "/services/2Win3.png",
+      "/services/2Win4.png",
+      "/services/2Win5.png",
     ],
   },
   {
@@ -74,9 +75,9 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
     logo: `turkuvaz_logos/2Mes_opt.svg`,
     images: [
       "/services/2Mes1.jpg",
-      "/services/2Mes2.jpg",
-      "/services/2Mes3.jpg",
-      "/services/2Mes4.jpg",
+      "/services/2Mes2.png",
+      "/services/2Mes3.png",
+      "/services/2Mes4.png",
     ],
   },
   {
@@ -119,9 +120,9 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
     logo: `turkuvaz_logos/2Bee_opt.svg`,
     images: [
       "/services/2Bee1.jpg",
-      "/services/2Bee2.jpg",
-      "/services/2Bee3.jpg",
-      "/services/2Bee4.jpg",
+      "/services/2Bee2.png",
+      "/services/2Bee3.png",
+      "/services/2Bee4.png",
     ],
   },
   {
@@ -138,10 +139,10 @@ kullanım kolaylığı ve zengin animasyon seçenekleri gibi özellikler öne ç
     ],
     logo: `turkuvaz_logos/atolye.svg`,
     images: [
-      "/services/Atolye1.jpg",
-      "/services/Atolye2.jpg",
-      "/services/Atolye3.jpg",
-      "/services/Atolye4.jpg",
+      "/services/Atolye1.png",
+      "/services/Atolye2.png",
+      "/services/Atolye3.png",
+      "/services/Atolye4.png",
     ],
   },
 ];
