@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-base-200 text-base-content p-8 grid border-t-4 border-cyan-600">
-    <div class="grid md:grid-cols-4 gap-10 lg:gap-1 lg:w-9/12 mx-auto">
+    <div class="grid lg:grid-cols-4 gap-10 lg:gap-1 lg:w-9/12 mx-auto">
       <!-- Company Info -->
       <div class="lg:mr-10 max-lg:text-center">
         <h2 class="font-bold text-lg mb-2">Turkuvaz İnovasyon</h2>
@@ -56,7 +56,7 @@
             <a href="tel:+903523115567">T: +90 352 311 55 67</a>
           </li>
           <li class="flex max-lg:justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 min-w-5 h-5" viewBox="0 0 512 512">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 min-w-5 self-center h-5" viewBox="0 0 512 512">
               <path
                 d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
             </svg>
