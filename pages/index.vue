@@ -11,6 +11,7 @@
             <div class="slide-track">
                 <div v-for="company in references" :key="company.name"
                     class="slide flex items-center justify-center w-56 h-full">
+                    <!-- TODO: If you want to delete the company website link, you can delete the @click event. -->
                     <NuxtImg :src="`images/${company.url}`" @click="openCompanySite(company.website)"
                         :title="company.description" />
                 </div>
@@ -29,7 +30,7 @@ import { services } from '~/data/services';
 export default {
     name: 'MainPage',
     setup() {
-
+        // SEO OPTIMIZATION
         useSeoMeta({
             title: 'Turkuvaz İnovasyon',
             description: `Endüstriyel alanda yenilikçi ve profesyonel çözümler sunan Turkuvaz İnovasyon, müşterilerine en iyi hizmeti
@@ -45,7 +46,7 @@ export default {
             ogImage: 'assets\\onlylogo.svg',
             ogUrl: 'https://turkuvazinovasyon.com',
         })
-
+        // ALSO SEO OPTIMIZATION
         useHead({
             htmlAttrs: {
                 lang: 'tr'
