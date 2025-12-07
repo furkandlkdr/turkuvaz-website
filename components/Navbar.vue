@@ -9,10 +9,10 @@
                 <ul class="text-xl menu menu-horizontal gap-x-8">
                     <!-- Services -->
                     <li>
-                        <details class="dropdown">
+                        <details>
                             <summary class="my-link">Hizmetler</summary>
                             <ul
-                                class="p-2 text-xl shadow z-[1] w-72 bg-base-300 rounded-t-none rounded-box border border-white/5 shadow-2xl outline outline-1 outline-black/5">
+                                class="p-2 text-xl menu z-[1] w-72 bg-base-300 rounded-t-none rounded-box border border-white/5 shadow-2xl outline-1 outline-black/5">
                                 <li v-for="service in services" :key="service.id">
                                     <NuxtLink :to="'/services/' + service.id"
                                         :class="{ 'my-link': true, 'active': isActive('/services/' + service.id) }">
@@ -58,13 +58,12 @@
                     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
                     <ul class="menu bg-base-300 text-base-content min-h-full w-80 p-4">
                         <li>
-                            <ul class="text-xl menu menu-horizontal gap-x-8">
+                            <ul class="text-xl menu gap-y-4">
                                 <!-- Services -->
                                 <li>
-                                    <details class="dropdown dropdown-right" ref="dropdownReferance">
+                                    <details ref="dropdownReferance">
                                         <summary>Hizmetler</summary>
-                                        <ul
-                                            class="p-2 text-xl shadow menu dropdown-content z-[1] w-72 bg-base-200 rounded-t-none">
+                                        <ul class="p-2 text-xl bg-base-200 rounded-t-none">
                                             <li v-for="service in services" :key="service.id">
                                                 <NuxtLink :to="'/services/' + service.id"
                                                     :class="{ 'my-link': true, 'active': isActive('/services/' + service.id) }">
@@ -110,12 +109,12 @@
                 </div>
 
                 <div tabindex="0" class="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 w-56 overflow-y-auto 
-                    border border-white/5 shadow-2xl outline outline-1 outline-black/5">
+                    border border-white/5 shadow-2xl outline-1 outline-black/5">
                     <ul class="menu menu-sm gap-1">
                         <li>
                             <button class="p-2">
                                 <span
-                                    class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px !text-[.6rem] font-bold tracking-widest opacity-50">
+                                    class="badge badge-sm badge-outline pl-1.5! pr-1! pt-px text-[.6rem]! font-bold tracking-widest opacity-50">
                                     EN
                                 </span>
                                 <span class="font-[sans-serif]">English</span>
@@ -124,7 +123,7 @@
                         <li>
                             <button class="active p-2">
                                 <span
-                                    class="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px !text-[.6rem] font-bold tracking-widest opacity-50">
+                                    class="badge badge-sm badge-outline pl-1.5! pr-1! pt-px text-[.6rem]! font-bold tracking-widest opacity-50">
                                     TR
                                 </span>
                                 <span class="font-[sans-serif]">Türkçe</span>
