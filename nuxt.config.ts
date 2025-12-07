@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   postcss: {
     plugins: {
-      tailwindcss: {},
+      '@tailwindcss/postcss': {},
       autoprefixer: {},
     },
   },
@@ -16,5 +16,5 @@ export default defineNuxtConfig({
     dir: 'static',
   },
 
-  compatibilityDate: '2024-09-08'
+  compatibilityDate: '2025-12-07'
 })
